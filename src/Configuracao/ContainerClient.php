@@ -8,7 +8,7 @@ use App\Application\Commands\Client\ClientUseCase;
 use App\Application\Commands\Client\ClientUseCaseImplementation;
 use App\Application\Queries\Client\ClientQueriesUseCaseImplementation;
 use App\Dominio\Repositorios\Client\ClientRepository;
-use App\Infra\Repositories\Client\ClientQueriesRepositoryImplementation;
+use App\Infraestrutura\Repositorios\Client\ClientQueriesRepositoryImplementation;
 use PDO;
 use Exception;
 use DI\Container;
@@ -17,7 +17,7 @@ use App\Application\Commands\Client\PacienteUseCase;
 use App\Application\Queries\Client\ClientQueriesUseCase;
 use App\Dominio\Repositorios\Client\ClientQueriesRepository;
 use App\Application\Commands\Client\PacienteUseCaseImplementation;
-use App\Infra\Repositories\Client\ClientRepositoryImplementation;
+use App\Infraestrutura\Repositorios\Client\ClientRepositoryImplementation;
 use App\Application\Queries\Client\PacienteQueriesUseCaseImplementation;
 
 $pathAutoloader = __DIR__.'/../../vendor/autoload.php';

@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace App\Dominio\Entidades\Processo\Fontes;
 
 use DateTime;
-use App\Dominio\ObjetoValor\Value;
+use App\Dominio\ObjetoValor\Valor;
 
 class EntidadeCapa
 {
@@ -15,7 +15,7 @@ class EntidadeCapa
         public string $assuntoNormalizado,
         public string $area,
         public string $orgaoJulgador,
-        public Value $causaValor,
+        public Valor $causaValor,
         public string $causaMoeda,
         public DateTime $dataDistribuicao,
         public DateTime $dataArquivamento,

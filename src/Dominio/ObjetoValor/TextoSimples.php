@@ -9,7 +9,7 @@ use Exception;
 final class TextoSimples
 {
     public function __construct(
-        private  string $string
+        private string $string
     ){
         if(!self::validation($this->string)){
             throw new Exception('String Invalid.');
@@ -20,11 +20,13 @@ final class TextoSimples
         $this->string = htmlspecialchars($this->string);
     }
 
-    function get(): string{
+    function get(): string
+    {
         return $this->string;
     }
 
-    static function validation(string $string): bool {
+    static function validation(string $string): bool
+    {
         return is_string($string);
     }
 }

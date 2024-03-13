@@ -696,7 +696,7 @@ HINT:  Perhaps you meant to reference the column "accounts.business_id".
 --------------------------------------------------
 28/09/2023 13:25:18 | CRITICAL | Informe o número do documento válido. 213213123123421 
 --------------------------------------------------
-28/09/2023 13:25:25 | CRITICAL | Ocorreu um erro ao executar a consulta. App\Infra\Repositories\Client\ClientRepositoryImplementation - SQLSTATE[23502]: Not null violation: 7 ERROR:  null value in column "business_id" violates not-null constraint
+28/09/2023 13:25:25 | CRITICAL | Ocorreu um erro ao executar a consulta. App\Infraestrutura\Repositorios\Client\ClientRepositoryImplementation - SQLSTATE[23502]: Not null violation: 7 ERROR:  null value in column "business_id" violates not-null constraint
 DETAIL:  Failing row contains (1, null, 5002e1f6-3698-4e50-b8a7-0e0d403deefd, Matheus Fogaça, (54) 98419-2072, matheus@email.com, 841.676.700-97, 13:25:25.869261). 
 --------------------------------------------------
 28/09/2023 13:25:25 | CRITICAL | Não foi possível salvar o novo cliente. Matheus Fogaça, matheus@email.com, (54) 98419-2072 | Ocorreu um erro ao executar a consulta. 
@@ -707,14 +707,14 @@ DETAIL:  Failing row contains (1, null, 5002e1f6-3698-4e50-b8a7-0e0d403deefd, Ma
 --------------------------------------------------
 28/09/2023 15:59:04 | INFO | Usuário logado com sucesso. (Matheus Maydana) 
 --------------------------------------------------
-28/09/2023 15:59:04 | CRITICAL | Ocorreu um erro ao executar a consulta. App\Infra\Repositories\Client\ClientRepositoryImplementation - SQLSTATE[23502]: Not null violation: 7 ERROR:  null value in column "business_id" violates not-null constraint
+28/09/2023 15:59:04 | CRITICAL | Ocorreu um erro ao executar a consulta. App\Infraestrutura\Repositorios\Client\ClientRepositoryImplementation - SQLSTATE[23502]: Not null violation: 7 ERROR:  null value in column "business_id" violates not-null constraint
 DETAIL:  Failing row contains (2, null, dbcf05e3-cc0a-42d5-bf63-52b3f2bdd980, Matheus Fogaça, (11) 99999-9999, matheus@email.com, 841.676.700-97, 15:59:04.337703). 
 --------------------------------------------------
 28/09/2023 15:59:04 | CRITICAL | Não foi possível salvar o novo cliente. Matheus Fogaça, matheus@email.com, (11) 99999-9999 | Ocorreu um erro ao executar a consulta. 
 --------------------------------------------------
 28/09/2023 15:59:06 | INFO | Usuário logado com sucesso. (Matheus Maydana) 
 --------------------------------------------------
-28/09/2023 15:59:06 | CRITICAL | Ocorreu um erro ao executar a consulta. App\Infra\Repositories\Client\ClientRepositoryImplementation - SQLSTATE[23502]: Not null violation: 7 ERROR:  null value in column "business_id" violates not-null constraint
+28/09/2023 15:59:06 | CRITICAL | Ocorreu um erro ao executar a consulta. App\Infraestrutura\Repositorios\Client\ClientRepositoryImplementation - SQLSTATE[23502]: Not null violation: 7 ERROR:  null value in column "business_id" violates not-null constraint
 DETAIL:  Failing row contains (3, null, 587eb6b8-974e-4f32-bb45-a5dbec0760e7, Matheus Fogaça, (11) 99999-9999, matheus@email.com, 841.676.700-97, 15:59:06.213853). 
 --------------------------------------------------
 28/09/2023 15:59:06 | CRITICAL | Não foi possível salvar o novo cliente. Matheus Fogaça, matheus@email.com, (11) 99999-9999 | Ocorreu um erro ao executar a consulta. 
@@ -739,21 +739,21 @@ DETAIL:  Failing row contains (3, null, 587eb6b8-974e-4f32-bb45-a5dbec0760e7, Ma
 --------------------------------------------------
 28/09/2023 16:01:48 | INFO | Usuário logado com sucesso. (Matheus Maydana) 
 --------------------------------------------------
-28/09/2023 16:01:48 | CRITICAL | Ocorreu um erro ao executar a consulta. App\Infra\Repositories\Client\ClientRepositoryImplementation - SQLSTATE[23502]: Not null violation: 7 ERROR:  null value in column "business_id" violates not-null constraint
+28/09/2023 16:01:48 | CRITICAL | Ocorreu um erro ao executar a consulta. App\Infraestrutura\Repositorios\Client\ClientRepositoryImplementation - SQLSTATE[23502]: Not null violation: 7 ERROR:  null value in column "business_id" violates not-null constraint
 DETAIL:  Failing row contains (4, null, 1dfc48d4-2a70-4688-9ba4-27a93faee399, Matheus Fogaça, (11) 99999-9999, matheus@email.com, 841.676.700-97, 16:01:48.656748). 
 --------------------------------------------------
 28/09/2023 16:01:48 | CRITICAL | Não foi possível salvar o novo cliente. Matheus Fogaça, matheus@email.com, (11) 99999-9999 | Ocorreu um erro ao executar a consulta. 
 --------------------------------------------------
 28/09/2023 16:01:50 | INFO | Usuário logado com sucesso. (Matheus Maydana) 
 --------------------------------------------------
-28/09/2023 16:01:50 | CRITICAL | Ocorreu um erro ao executar a consulta. App\Infra\Repositories\Client\ClientRepositoryImplementation - SQLSTATE[23502]: Not null violation: 7 ERROR:  null value in column "business_id" violates not-null constraint
+28/09/2023 16:01:50 | CRITICAL | Ocorreu um erro ao executar a consulta. App\Infraestrutura\Repositorios\Client\ClientRepositoryImplementation - SQLSTATE[23502]: Not null violation: 7 ERROR:  null value in column "business_id" violates not-null constraint
 DETAIL:  Failing row contains (5, null, 3ce7ae7d-207c-4fab-b7bd-70ace618eb50, Matheus Fogaça, (11) 99999-9999, matheus@email.com, 841.676.700-97, 16:01:50.381251). 
 --------------------------------------------------
 28/09/2023 16:01:50 | CRITICAL | Não foi possível salvar o novo cliente. Matheus Fogaça, matheus@email.com, (11) 99999-9999 | Ocorreu um erro ao executar a consulta. 
 --------------------------------------------------
 28/09/2023 16:01:51 | INFO | Usuário logado com sucesso. (Matheus Maydana) 
 --------------------------------------------------
-28/09/2023 16:01:51 | CRITICAL | Ocorreu um erro ao executar a consulta. App\Infra\Repositories\Client\ClientRepositoryImplementation - SQLSTATE[23502]: Not null violation: 7 ERROR:  null value in column "business_id" violates not-null constraint
+28/09/2023 16:01:51 | CRITICAL | Ocorreu um erro ao executar a consulta. App\Infraestrutura\Repositorios\Client\ClientRepositoryImplementation - SQLSTATE[23502]: Not null violation: 7 ERROR:  null value in column "business_id" violates not-null constraint
 DETAIL:  Failing row contains (6, null, 7083ae7f-5f91-4bd4-956f-811c5a871efa, Matheus Fogaça, (11) 99999-9999, matheus@email.com, 841.676.700-97, 16:01:51.248835). 
 --------------------------------------------------
 28/09/2023 16:01:51 | CRITICAL | Não foi possível salvar o novo cliente. Matheus Fogaça, matheus@email.com, (11) 99999-9999 | Ocorreu um erro ao executar a consulta. 
@@ -774,42 +774,42 @@ DETAIL:  Failing row contains (6, null, 7083ae7f-5f91-4bd4-956f-811c5a871efa, Ma
 --------------------------------------------------
 28/09/2023 16:04:50 | INFO | Usuário logado com sucesso. (Matheus Maydana) 
 --------------------------------------------------
-28/09/2023 16:04:50 | CRITICAL | Ocorreu um erro ao executar a consulta. App\Infra\Repositories\Client\ClientRepositoryImplementation - SQLSTATE[23502]: Not null violation: 7 ERROR:  null value in column "business_id" violates not-null constraint
+28/09/2023 16:04:50 | CRITICAL | Ocorreu um erro ao executar a consulta. App\Infraestrutura\Repositorios\Client\ClientRepositoryImplementation - SQLSTATE[23502]: Not null violation: 7 ERROR:  null value in column "business_id" violates not-null constraint
 DETAIL:  Failing row contains (7, null, 3fb90b33-e9fe-4006-be0b-7d40f124cb0c, Matheus Fogaça, (11) 99999-9999, matheus@email.com, 841.676.700-97, 16:04:50.902785). 
 --------------------------------------------------
 28/09/2023 16:04:50 | CRITICAL | Não foi possível salvar o novo cliente. Matheus Fogaça, matheus@email.com, (11) 99999-9999 | Ocorreu um erro ao executar a consulta. 
 --------------------------------------------------
 28/09/2023 16:06:50 | INFO | Usuário logado com sucesso. (Matheus Maydana) 
 --------------------------------------------------
-28/09/2023 16:06:50 | CRITICAL | Ocorreu um erro ao executar a consulta. App\Infra\Repositories\Client\ClientRepositoryImplementation - SQLSTATE[23502]: Not null violation: 7 ERROR:  null value in column "business_id" violates not-null constraint
+28/09/2023 16:06:50 | CRITICAL | Ocorreu um erro ao executar a consulta. App\Infraestrutura\Repositorios\Client\ClientRepositoryImplementation - SQLSTATE[23502]: Not null violation: 7 ERROR:  null value in column "business_id" violates not-null constraint
 DETAIL:  Failing row contains (8, null, 2fbb0616-21b9-4b2f-980a-a1947c248518, Matheus Fogaça, (11) 99999-9999, matheus@email.com, 841.676.700-97, 16:06:50.780708). 
 --------------------------------------------------
 28/09/2023 16:06:50 | CRITICAL | Não foi possível salvar o novo cliente. Matheus Fogaça, matheus@email.com, (11) 99999-9999 | Ocorreu um erro ao executar a consulta. 
 --------------------------------------------------
 28/09/2023 16:06:54 | INFO | Usuário logado com sucesso. (Matheus Maydana) 
 --------------------------------------------------
-28/09/2023 16:06:54 | CRITICAL | Ocorreu um erro ao executar a consulta. App\Infra\Repositories\Client\ClientRepositoryImplementation - SQLSTATE[23502]: Not null violation: 7 ERROR:  null value in column "business_id" violates not-null constraint
+28/09/2023 16:06:54 | CRITICAL | Ocorreu um erro ao executar a consulta. App\Infraestrutura\Repositorios\Client\ClientRepositoryImplementation - SQLSTATE[23502]: Not null violation: 7 ERROR:  null value in column "business_id" violates not-null constraint
 DETAIL:  Failing row contains (9, null, 1c38f2c6-8603-46f1-b2ad-d7a66889df61, Matheus Fogaça, (11) 99999-9999, matheus@email.com, 841.676.700-97, 16:06:54.451961). 
 --------------------------------------------------
 28/09/2023 16:06:54 | CRITICAL | Não foi possível salvar o novo cliente. Matheus Fogaça, matheus@email.com, (11) 99999-9999 | Ocorreu um erro ao executar a consulta. 
 --------------------------------------------------
 28/09/2023 16:08:57 | INFO | Usuário logado com sucesso. (Matheus Maydana) 
 --------------------------------------------------
-28/09/2023 16:08:57 | CRITICAL | Ocorreu um erro ao executar a consulta. App\Infra\Repositories\Client\ClientRepositoryImplementation - SQLSTATE[23502]: Not null violation: 7 ERROR:  null value in column "business_id" violates not-null constraint
+28/09/2023 16:08:57 | CRITICAL | Ocorreu um erro ao executar a consulta. App\Infraestrutura\Repositorios\Client\ClientRepositoryImplementation - SQLSTATE[23502]: Not null violation: 7 ERROR:  null value in column "business_id" violates not-null constraint
 DETAIL:  Failing row contains (10, null, d624d190-8163-4b5b-b7da-d3c9350898b4, Matheus Fogaça, (11) 99999-9999, matheus@email.com, 841.676.700-97, 16:08:57.718881). 
 --------------------------------------------------
 28/09/2023 16:08:57 | CRITICAL | Não foi possível salvar o novo cliente. Matheus Fogaça, matheus@email.com, (11) 99999-9999 | Ocorreu um erro ao executar a consulta. 
 --------------------------------------------------
 28/09/2023 16:09:14 | INFO | Usuário logado com sucesso. (Matheus Maydana) 
 --------------------------------------------------
-28/09/2023 16:09:14 | CRITICAL | Ocorreu um erro ao executar a consulta. App\Infra\Repositories\Client\ClientRepositoryImplementation - SQLSTATE[23502]: Not null violation: 7 ERROR:  null value in column "business_id" violates not-null constraint
+28/09/2023 16:09:14 | CRITICAL | Ocorreu um erro ao executar a consulta. App\Infraestrutura\Repositorios\Client\ClientRepositoryImplementation - SQLSTATE[23502]: Not null violation: 7 ERROR:  null value in column "business_id" violates not-null constraint
 DETAIL:  Failing row contains (11, null, d7abfb24-177a-406d-bbdc-c5b8dac5670e, Matheus Fogaça, (11) 99999-9999, matheus@email.com, 841.676.700-97, 16:09:14.780854). 
 --------------------------------------------------
 28/09/2023 16:09:14 | CRITICAL | Não foi possível salvar o novo cliente. Matheus Fogaça, matheus@email.com, (11) 99999-9999 | Ocorreu um erro ao executar a consulta. 
 --------------------------------------------------
 28/09/2023 16:10:19 | INFO | Usuário logado com sucesso. (Matheus Maydana) 
 --------------------------------------------------
-28/09/2023 16:10:19 | CRITICAL | Ocorreu um erro ao executar a consulta. App\Infra\Repositories\Client\ClientRepositoryImplementation - SQLSTATE[23502]: Not null violation: 7 ERROR:  null value in column "business_id" violates not-null constraint
+28/09/2023 16:10:19 | CRITICAL | Ocorreu um erro ao executar a consulta. App\Infraestrutura\Repositorios\Client\ClientRepositoryImplementation - SQLSTATE[23502]: Not null violation: 7 ERROR:  null value in column "business_id" violates not-null constraint
 DETAIL:  Failing row contains (12, null, f8468f87-35e3-4966-96fd-5026897a645d, Matheus Fogaça, (11) 99999-9999, matheus@email.com, 841.676.700-97, 16:10:19.694412). 
 --------------------------------------------------
 28/09/2023 16:10:19 | CRITICAL | Não foi possível salvar o novo cliente. Matheus Fogaça, matheus@email.com, (11) 99999-9999 | Ocorreu um erro ao executar a consulta. 
@@ -846,7 +846,7 @@ DETAIL:  Failing row contains (12, null, f8468f87-35e3-4966-96fd-5026897a645d, M
 --------------------------------------------------
 28/09/2023 16:12:21 | CRITICAL | Já existe um cliente com esse documento, tente outro. (84167670097) 
 --------------------------------------------------
-28/09/2023 16:12:21 | CRITICAL | Ocorreu um erro ao executar a consulta. App\Infra\Repositories\BankAccount\BankAccountRepositoryImplementation in App\Infra\Repositories\BankAccount\BankAccountRepositoryImplementation::newBankAccount 
+28/09/2023 16:12:21 | CRITICAL | Ocorreu um erro ao executar a consulta. App\Infraestrutura\Repositorios\BankAccount\BankAccountRepositoryImplementation in App\Infraestrutura\Repositorios\BankAccount\BankAccountRepositoryImplementation::newBankAccount
 --------------------------------------------------
 28/09/2023 16:12:21 | CRITICAL | Ocorreu um erro ao executar a consulta. 
 --------------------------------------------------
@@ -887,7 +887,7 @@ DETAIL:  Failing row contains (1, null, 349fb3f9-7b1c-4bd6-8df4-bfbae4585b09, 31
 --------------------------------------------------
 28/09/2023 16:18:23 | INFO | Contrato criado com sucesso. Código do contrato: d9ed6b20-ad0e-451b-ae18-898da71c6941 
 --------------------------------------------------
-28/09/2023 16:18:23 | CRITICAL | Não foi possível salvar o plano de contas no banco de dados. - App\Infra\Repositories\ChartOfAccount\ChartOfAccountRepositoryImplementation - SQLSTATE[23502]: Not null violation: 7 ERROR:  null value in column "business_id" violates not-null constraint
+28/09/2023 16:18:23 | CRITICAL | Não foi possível salvar o plano de contas no banco de dados. - App\Infraestrutura\Repositorios\ChartOfAccount\ChartOfAccountRepositoryImplementation - SQLSTATE[23502]: Not null violation: 7 ERROR:  null value in column "business_id" violates not-null constraint
 DETAIL:  Failing row contains (1, null, 4a99870d-5955-42f0-87cd-6e5c11c3d16e, Taxa Administrativa, Taxa Administrativa, 16:18:23.587289). 
 --------------------------------------------------
 28/09/2023 16:18:23 | CRITICAL | Não foi possível criar o plano de contas. Taxa Administrativa} 
@@ -902,7 +902,7 @@ DETAIL:  Failing row contains (1, null, 4a99870d-5955-42f0-87cd-6e5c11c3d16e, Ta
 --------------------------------------------------
 28/09/2023 16:18:46 | INFO | Contrato criado com sucesso. Código do contrato: 84c1fd65-c965-41e1-8ffb-6dbd1d6efe67 
 --------------------------------------------------
-28/09/2023 16:18:47 | CRITICAL | Não foi possível salvar o plano de contas no banco de dados. - App\Infra\Repositories\ChartOfAccount\ChartOfAccountRepositoryImplementation - SQLSTATE[23502]: Not null violation: 7 ERROR:  null value in column "business_id" violates not-null constraint
+28/09/2023 16:18:47 | CRITICAL | Não foi possível salvar o plano de contas no banco de dados. - App\Infraestrutura\Repositorios\ChartOfAccount\ChartOfAccountRepositoryImplementation - SQLSTATE[23502]: Not null violation: 7 ERROR:  null value in column "business_id" violates not-null constraint
 DETAIL:  Failing row contains (2, null, f0700cd5-044c-4101-9bc8-1b73885b2f14, Taxa Administrativa, Taxa Administrativa, 16:18:47.108167). 
 --------------------------------------------------
 28/09/2023 16:18:47 | CRITICAL | Não foi possível criar o plano de contas. Taxa Administrativa} 
@@ -917,7 +917,7 @@ DETAIL:  Failing row contains (2, null, f0700cd5-044c-4101-9bc8-1b73885b2f14, Ta
 --------------------------------------------------
 28/09/2023 16:19:34 | INFO | Contrato criado com sucesso. Código do contrato: 302270c5-63a5-4306-9c3b-a2f1c97fa6af 
 --------------------------------------------------
-28/09/2023 16:19:34 | CRITICAL | Não foi possível salvar o plano de contas no banco de dados. - App\Infra\Repositories\ChartOfAccount\ChartOfAccountRepositoryImplementation - SQLSTATE[23502]: Not null violation: 7 ERROR:  null value in column "business_id" violates not-null constraint
+28/09/2023 16:19:34 | CRITICAL | Não foi possível salvar o plano de contas no banco de dados. - App\Infraestrutura\Repositorios\ChartOfAccount\ChartOfAccountRepositoryImplementation - SQLSTATE[23502]: Not null violation: 7 ERROR:  null value in column "business_id" violates not-null constraint
 DETAIL:  Failing row contains (3, null, 408b865c-cad5-408d-8457-4d6b56eb85ed, Taxa Administrativa, Taxa Administrativa, 16:19:34.524009). 
 --------------------------------------------------
 28/09/2023 16:19:34 | CRITICAL | Não foi possível criar o plano de contas. Taxa Administrativa} 
@@ -932,7 +932,7 @@ DETAIL:  Failing row contains (3, null, 408b865c-cad5-408d-8457-4d6b56eb85ed, Ta
 --------------------------------------------------
 28/09/2023 16:20:25 | INFO | Contrato criado com sucesso. Código do contrato: 28876a35-2490-4585-8eb6-944168315c9a 
 --------------------------------------------------
-28/09/2023 16:20:25 | CRITICAL | Não foi possível salvar o plano de contas no banco de dados. - App\Infra\Repositories\ChartOfAccount\ChartOfAccountRepositoryImplementation - SQLSTATE[23502]: Not null violation: 7 ERROR:  null value in column "business_id" violates not-null constraint
+28/09/2023 16:20:25 | CRITICAL | Não foi possível salvar o plano de contas no banco de dados. - App\Infraestrutura\Repositorios\ChartOfAccount\ChartOfAccountRepositoryImplementation - SQLSTATE[23502]: Not null violation: 7 ERROR:  null value in column "business_id" violates not-null constraint
 DETAIL:  Failing row contains (4, null, b15c33e2-82bf-42b7-859b-f2e70fb7fd06, Taxa Administrativa, Taxa Administrativa, 16:20:25.473816). 
 --------------------------------------------------
 28/09/2023 16:20:25 | CRITICAL | Não foi possível criar o plano de contas. Taxa Administrativa} 
@@ -949,7 +949,7 @@ DETAIL:  Failing row contains (4, null, b15c33e2-82bf-42b7-859b-f2e70fb7fd06, Ta
 --------------------------------------------------
 28/09/2023 16:20:58 | INFO | Plano de conta Taxa Administrativa criado com sucesso. 
 --------------------------------------------------
-28/09/2023 16:20:58 | CRITICAL | Ocorreu um erro ao executar a inserção. App\Infra\Repositories\Billing\BillingRepositoryImplementation - SQLSTATE[23502]: Not null violation: 7 ERROR:  null value in column "business_id" violates not-null constraint
+28/09/2023 16:20:58 | CRITICAL | Ocorreu um erro ao executar a inserção. App\Infraestrutura\Repositorios\Billing\BillingRepositoryImplementation - SQLSTATE[23502]: Not null violation: 7 ERROR:  null value in column "business_id" violates not-null constraint
 DETAIL:  Failing row contains (1, null, 71ed5c59-f296-4de0-8fb2-49510ea433e8, d9ed6b20-ad0e-451b-ae18-898da71c6941, 131f7321-eb95-43a9-8e47-ceecb1a0296e, Taxa Administrativa, 85.37, 16:20:58.596345). 
 --------------------------------------------------
 28/09/2023 16:20:58 | CRITICAL | Ocorreu um erro ao executar a inserção. 
@@ -3278,11 +3278,11 @@ DETAIL:  Failing row contains (1, null, 71ed5c59-f296-4de0-8fb2-49510ea433e8, d9
 --------------------------------------------------
 02/10/2023 10:32:10 | INFO | O boleto 842b1cb7-e182-4eab-952e-71026bfc83cd foi gerado para o cliente Matheus Fogaça e estamos enviando para a fila de cobrança. 
 --------------------------------------------------
-02/10/2023 10:39:48 | CRITICAL | Ocorreu um erro ao executar a consulta. App\Infra\Repositories\Client\ClientRepositoryImplementation - SQLSTATE[42703]: Undefined column: 7 ERROR:  column "price_list_id" does not exist
+02/10/2023 10:39:48 | CRITICAL | Ocorreu um erro ao executar a consulta. App\Infraestrutura\Repositorios\Client\ClientRepositoryImplementation - SQLSTATE[42703]: Undefined column: 7 ERROR:  column "price_list_id" does not exist
 LINE 1: SELECT name, email, phone, code, type_register, price_list_i...
                                                         ^ 
 --------------------------------------------------
-02/10/2023 10:40:06 | CRITICAL | Ocorreu um erro ao executar a consulta. App\Infra\Repositories\Client\ClientRepositoryImplementation - SQLSTATE[42703]: Undefined column: 7 ERROR:  column "price_list_id" does not exist
+02/10/2023 10:40:06 | CRITICAL | Ocorreu um erro ao executar a consulta. App\Infraestrutura\Repositorios\Client\ClientRepositoryImplementation - SQLSTATE[42703]: Undefined column: 7 ERROR:  column "price_list_id" does not exist
 LINE 1: SELECT name, email, phone, code, type_register, price_list_i...
                                                         ^ 
 --------------------------------------------------
@@ -3300,11 +3300,11 @@ LINE 1: SELECT name, email, phone, code, type_register, price_list_i...
 --------------------------------------------------
 02/10/2023 10:41:15 | INFO | O boleto 7561bccc-fabe-4434-a548-997ba3781646 foi gerado para o cliente Matheus Fogaça e estamos enviando para a fila de cobrança. 
 --------------------------------------------------
-02/10/2023 10:47:10 | CRITICAL | Ocorreu um erro ao executar a consulta. App\Infra\Repositories\Client\ClientRepositoryImplementation - SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  invalid input syntax for integer: "32a66133-2697-4437-90f2-86dd593f544d"
+02/10/2023 10:47:10 | CRITICAL | Ocorreu um erro ao executar a consulta. App\Infraestrutura\Repositorios\Client\ClientRepositoryImplementation - SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  invalid input syntax for integer: "32a66133-2697-4437-90f2-86dd593f544d"
 LINE 1: SELECT code, name FROM price_list WHERE id = '32a66133-2697-...
                                                      ^ 
 --------------------------------------------------
-02/10/2023 10:47:33 | CRITICAL | Ocorreu um erro ao executar a consulta. App\Infra\Repositories\Client\ClientRepositoryImplementation - SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  invalid input syntax for integer: "32a66133-2697-4437-90f2-86dd593f544d"
+02/10/2023 10:47:33 | CRITICAL | Ocorreu um erro ao executar a consulta. App\Infraestrutura\Repositorios\Client\ClientRepositoryImplementation - SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  invalid input syntax for integer: "32a66133-2697-4437-90f2-86dd593f544d"
 LINE 1: SELECT code, name FROM price_list WHERE id = '32a66133-2697-...
                                                      ^ 
 --------------------------------------------------
@@ -5026,15 +5026,15 @@ LINE 1: SELECT code, name FROM price_list WHERE id = '32a66133-2697-...
 --------------------------------------------------
 06/10/2023 13:14:12 | INFO | O boleto 174687d3-bb8f-434c-b19e-ec7634f78415 foi gerado para o cliente Matheus Fogaça e estamos enviando para a fila de cobrança. 
 --------------------------------------------------
-06/10/2023 13:27:28 | CRITICAL | Ocorreu um erro ao executar a consulta. App\Infra\Repositories\Client\ClientRepositoryImplementation - SQLSTATE[42P01]: Undefined table: 7 ERROR:  relation "price_list_product" does not exist
+06/10/2023 13:27:28 | CRITICAL | Ocorreu um erro ao executar a consulta. App\Infraestrutura\Repositorios\Client\ClientRepositoryImplementation - SQLSTATE[42P01]: Undefined table: 7 ERROR:  relation "price_list_product" does not exist
 LINE 1: SELECT product_id FROM price_list_product WHERE price_list_i...
                                ^ 
 --------------------------------------------------
-06/10/2023 13:37:48 | CRITICAL | Ocorreu um erro ao executar a consulta. App\Infra\Repositories\Client\ClientRepositoryImplementation - SQLSTATE[HY093]: Invalid parameter number: parameter was not defined 
+06/10/2023 13:37:48 | CRITICAL | Ocorreu um erro ao executar a consulta. App\Infraestrutura\Repositorios\Client\ClientRepositoryImplementation - SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
 --------------------------------------------------
-06/10/2023 13:38:28 | CRITICAL | Ocorreu um erro ao executar a consulta. App\Infra\Repositories\Client\ClientRepositoryImplementation - SQLSTATE[HY093]: Invalid parameter number: parameter was not defined 
+06/10/2023 13:38:28 | CRITICAL | Ocorreu um erro ao executar a consulta. App\Infraestrutura\Repositorios\Client\ClientRepositoryImplementation - SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
 --------------------------------------------------
-06/10/2023 13:41:43 | CRITICAL | Ocorreu um erro ao executar a consulta. App\Infra\Repositories\Client\ClientRepositoryImplementation - SQLSTATE[HY093]: Invalid parameter number: parameter was not defined 
+06/10/2023 13:41:43 | CRITICAL | Ocorreu um erro ao executar a consulta. App\Infraestrutura\Repositorios\Client\ClientRepositoryImplementation - SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
 --------------------------------------------------
 06/10/2023 14:37:34 | INFO | Conta criada com sucesso. (mattmaydana_2007@gmail.com, Matheus Maydana) 
 --------------------------------------------------
@@ -8128,7 +8128,7 @@ LINE 1: SELECT product_id FROM price_list_product WHERE price_list_i...
 --------------------------------------------------
 13/10/2023 14:41:45 | INFO | Plano de conta Caneca Preto Randkno criado com sucesso. 
 --------------------------------------------------
-13/10/2023 14:41:45 | CRITICAL | Ocorreu um erro ao executar a inserção. App\Infra\Repositories\Billing\BillingRepositoryImplementation - SQLSTATE[42703]: Undefined column: 7 ERROR:  column "order_service_id" of relation "cobrancas_composicao" does not exist
+13/10/2023 14:41:45 | CRITICAL | Ocorreu um erro ao executar a inserção. App\Infraestrutura\Repositorios\Billing\BillingRepositoryImplementation - SQLSTATE[42703]: Undefined column: 7 ERROR:  column "order_service_id" of relation "cobrancas_composicao" does not exist
 LINE 4:             order_service_id,
                     ^ 
 --------------------------------------------------
@@ -9384,7 +9384,7 @@ LINE 4:             order_service_id,
 --------------------------------------------------
 13/10/2023 14:43:26 | INFO | Plano de conta Caneca Preto Randjtx criado com sucesso. 
 --------------------------------------------------
-13/10/2023 14:43:26 | CRITICAL | Ocorreu um erro ao executar a inserção. App\Infra\Repositories\Billing\BillingRepositoryImplementation - SQLSTATE[42703]: Undefined column: 7 ERROR:  column "order_service_id" of relation "cobrancas_composicao" does not exist
+13/10/2023 14:43:26 | CRITICAL | Ocorreu um erro ao executar a inserção. App\Infraestrutura\Repositorios\Billing\BillingRepositoryImplementation - SQLSTATE[42703]: Undefined column: 7 ERROR:  column "order_service_id" of relation "cobrancas_composicao" does not exist
 LINE 4:             order_service_id,
                     ^ 
 --------------------------------------------------
@@ -9404,7 +9404,7 @@ LINE 4:             order_service_id,
 --------------------------------------------------
 13/10/2023 14:43:50 | INFO | Plano de conta Caneca Preto Randnco criado com sucesso. 
 --------------------------------------------------
-13/10/2023 14:43:50 | CRITICAL | Ocorreu um erro ao executar a inserção. App\Infra\Repositories\Billing\BillingRepositoryImplementation - SQLSTATE[42703]: Undefined column: 7 ERROR:  column "order_service_id" of relation "cobrancas_composicao" does not exist
+13/10/2023 14:43:50 | CRITICAL | Ocorreu um erro ao executar a inserção. App\Infraestrutura\Repositorios\Billing\BillingRepositoryImplementation - SQLSTATE[42703]: Undefined column: 7 ERROR:  column "order_service_id" of relation "cobrancas_composicao" does not exist
 LINE 4:             order_service_id,
                     ^ 
 --------------------------------------------------
@@ -10048,7 +10048,7 @@ LINE 4:             order_service_id,
 --------------------------------------------------
 13/10/2023 16:46:05 | INFO | Plano de conta Caneca Preto Randdrn criado com sucesso. 
 --------------------------------------------------
-13/10/2023 16:46:06 | ERROR | Parâmetros inválidos. App\Infra\Repositories\Billing\BillingRepositoryImplementation 
+13/10/2023 16:46:06 | ERROR | Parâmetros inválidos. App\Infraestrutura\Repositorios\Billing\BillingRepositoryImplementation
 --------------------------------------------------
 13/10/2023 16:46:06 | CRITICAL | Parâmetros inválidos. 
 --------------------------------------------------
@@ -10068,7 +10068,7 @@ LINE 4:             order_service_id,
 --------------------------------------------------
 13/10/2023 16:47:11 | INFO | Plano de conta Caneca Preto Randsbu criado com sucesso. 
 --------------------------------------------------
-13/10/2023 16:47:12 | ERROR | Parâmetros inválidos. App\Infra\Repositories\Billing\BillingRepositoryImplementation 
+13/10/2023 16:47:12 | ERROR | Parâmetros inválidos. App\Infraestrutura\Repositorios\Billing\BillingRepositoryImplementation
 --------------------------------------------------
 13/10/2023 16:47:12 | CRITICAL | Parâmetros inválidos. 
 --------------------------------------------------
@@ -10088,7 +10088,7 @@ LINE 4:             order_service_id,
 --------------------------------------------------
 13/10/2023 16:48:26 | INFO | Plano de conta Caneca Preto Randbjy criado com sucesso. 
 --------------------------------------------------
-13/10/2023 16:48:27 | ERROR | Parâmetros inválidos. App\Infra\Repositories\Billing\BillingRepositoryImplementation 
+13/10/2023 16:48:27 | ERROR | Parâmetros inválidos. App\Infraestrutura\Repositorios\Billing\BillingRepositoryImplementation
 --------------------------------------------------
 13/10/2023 16:48:27 | CRITICAL | Parâmetros inválidos. 
 --------------------------------------------------
@@ -10104,7 +10104,7 @@ LINE 4:             order_service_id,
 --------------------------------------------------
 13/10/2023 16:49:53 | INFO | Plano de conta Taxa Administrativa criado com sucesso. 
 --------------------------------------------------
-13/10/2023 16:49:54 | CRITICAL | Erro ao emitir cobrança. App\Infra\Repositories\Billing\BillingRepositoryImplementation - SQLSTATE[42703]: Undefined column: 7 ERROR:  column "order_service_id" of relation "cobrancas" does not exist
+13/10/2023 16:49:54 | CRITICAL | Erro ao emitir cobrança. App\Infraestrutura\Repositorios\Billing\BillingRepositoryImplementation - SQLSTATE[42703]: Undefined column: 7 ERROR:  column "order_service_id" of relation "cobrancas" does not exist
 LINE 5:             order_service_id,
                     ^ 
 --------------------------------------------------
@@ -10124,7 +10124,7 @@ LINE 5:             order_service_id,
 --------------------------------------------------
 13/10/2023 16:50:20 | INFO | Plano de conta Taxa Administrativa criado com sucesso. 
 --------------------------------------------------
-13/10/2023 16:50:21 | CRITICAL | Erro ao emitir cobrança. App\Infra\Repositories\Billing\BillingRepositoryImplementation - SQLSTATE[42703]: Undefined column: 7 ERROR:  column "order_service_id" of relation "cobrancas" does not exist
+13/10/2023 16:50:21 | CRITICAL | Erro ao emitir cobrança. App\Infraestrutura\Repositorios\Billing\BillingRepositoryImplementation - SQLSTATE[42703]: Undefined column: 7 ERROR:  column "order_service_id" of relation "cobrancas" does not exist
 LINE 5:             order_service_id,
                     ^ 
 --------------------------------------------------
@@ -10144,7 +10144,7 @@ LINE 5:             order_service_id,
 --------------------------------------------------
 13/10/2023 16:50:46 | INFO | Plano de conta Taxa Administrativa criado com sucesso. 
 --------------------------------------------------
-13/10/2023 16:50:47 | CRITICAL | Erro ao emitir cobrança. App\Infra\Repositories\Billing\BillingRepositoryImplementation - SQLSTATE[42703]: Undefined column: 7 ERROR:  column "order_service_id" of relation "cobrancas" does not exist
+13/10/2023 16:50:47 | CRITICAL | Erro ao emitir cobrança. App\Infraestrutura\Repositorios\Billing\BillingRepositoryImplementation - SQLSTATE[42703]: Undefined column: 7 ERROR:  column "order_service_id" of relation "cobrancas" does not exist
 LINE 5:             order_service_id,
                     ^ 
 --------------------------------------------------
@@ -11352,19 +11352,19 @@ LINE 5:             order_service_id,
 --------------------------------------------------
 17/10/2023 01:00:33 | INFO | Plano de conta Pagamento criado com sucesso. 
 --------------------------------------------------
-17/10/2023 01:01:25 | ERROR | Conta bancária não encontrada. App\Infra\Repositories\BankAccount\BankAccountRepositoryImplementation in App\Infra\Repositories\BankAccount\BankAccountRepositoryImplementation::getBankAccountByID 
+17/10/2023 01:01:25 | ERROR | Conta bancária não encontrada. App\Infraestrutura\Repositorios\BankAccount\BankAccountRepositoryImplementation in App\Infraestrutura\Repositorios\BankAccount\BankAccountRepositoryImplementation::getBankAccountByID
 --------------------------------------------------
-17/10/2023 01:01:30 | ERROR | Conta bancária não encontrada. App\Infra\Repositories\BankAccount\BankAccountRepositoryImplementation in App\Infra\Repositories\BankAccount\BankAccountRepositoryImplementation::getBankAccountByID 
+17/10/2023 01:01:30 | ERROR | Conta bancária não encontrada. App\Infraestrutura\Repositorios\BankAccount\BankAccountRepositoryImplementation in App\Infraestrutura\Repositorios\BankAccount\BankAccountRepositoryImplementation::getBankAccountByID
 --------------------------------------------------
-17/10/2023 01:01:35 | ERROR | Conta bancária não encontrada. App\Infra\Repositories\BankAccount\BankAccountRepositoryImplementation in App\Infra\Repositories\BankAccount\BankAccountRepositoryImplementation::getBankAccountByID 
+17/10/2023 01:01:35 | ERROR | Conta bancária não encontrada. App\Infraestrutura\Repositorios\BankAccount\BankAccountRepositoryImplementation in App\Infraestrutura\Repositorios\BankAccount\BankAccountRepositoryImplementation::getBankAccountByID
 --------------------------------------------------
-17/10/2023 01:01:45 | ERROR | Conta bancária não encontrada. App\Infra\Repositories\BankAccount\BankAccountRepositoryImplementation in App\Infra\Repositories\BankAccount\BankAccountRepositoryImplementation::getBankAccountByID 
+17/10/2023 01:01:45 | ERROR | Conta bancária não encontrada. App\Infraestrutura\Repositorios\BankAccount\BankAccountRepositoryImplementation in App\Infraestrutura\Repositorios\BankAccount\BankAccountRepositoryImplementation::getBankAccountByID
 --------------------------------------------------
-17/10/2023 01:01:55 | ERROR | Conta bancária não encontrada. App\Infra\Repositories\BankAccount\BankAccountRepositoryImplementation in App\Infra\Repositories\BankAccount\BankAccountRepositoryImplementation::getBankAccountByID 
+17/10/2023 01:01:55 | ERROR | Conta bancária não encontrada. App\Infraestrutura\Repositorios\BankAccount\BankAccountRepositoryImplementation in App\Infraestrutura\Repositorios\BankAccount\BankAccountRepositoryImplementation::getBankAccountByID
 --------------------------------------------------
-17/10/2023 01:02:13 | ERROR | Conta bancária não encontrada. App\Infra\Repositories\BankAccount\BankAccountRepositoryImplementation in App\Infra\Repositories\BankAccount\BankAccountRepositoryImplementation::getBankAccountByID 
+17/10/2023 01:02:13 | ERROR | Conta bancária não encontrada. App\Infraestrutura\Repositorios\BankAccount\BankAccountRepositoryImplementation in App\Infraestrutura\Repositorios\BankAccount\BankAccountRepositoryImplementation::getBankAccountByID
 --------------------------------------------------
-17/10/2023 01:02:15 | ERROR | Conta bancária não encontrada. App\Infra\Repositories\BankAccount\BankAccountRepositoryImplementation in App\Infra\Repositories\BankAccount\BankAccountRepositoryImplementation::getBankAccountByID 
+17/10/2023 01:02:15 | ERROR | Conta bancária não encontrada. App\Infraestrutura\Repositorios\BankAccount\BankAccountRepositoryImplementation in App\Infraestrutura\Repositorios\BankAccount\BankAccountRepositoryImplementation::getBankAccountByID
 --------------------------------------------------
 17/10/2023 01:03:57 | ERROR | Tentativa de cadastro com e-mail já existente. (mattmaydana_2001@gmail.com) 
 --------------------------------------------------
@@ -11390,13 +11390,13 @@ LINE 5:             order_service_id,
 --------------------------------------------------
 17/10/2023 01:04:17 | INFO | Plano de conta Pagamento criado com sucesso. 
 --------------------------------------------------
-17/10/2023 01:04:30 | ERROR | Conta bancária não encontrada. App\Infra\Repositories\BankAccount\BankAccountRepositoryImplementation in App\Infra\Repositories\BankAccount\BankAccountRepositoryImplementation::getBankAccountByID 
+17/10/2023 01:04:30 | ERROR | Conta bancária não encontrada. App\Infraestrutura\Repositorios\BankAccount\BankAccountRepositoryImplementation in App\Infraestrutura\Repositorios\BankAccount\BankAccountRepositoryImplementation::getBankAccountByID
 --------------------------------------------------
-17/10/2023 01:04:31 | ERROR | Conta bancária não encontrada. App\Infra\Repositories\BankAccount\BankAccountRepositoryImplementation in App\Infra\Repositories\BankAccount\BankAccountRepositoryImplementation::getBankAccountByID 
+17/10/2023 01:04:31 | ERROR | Conta bancária não encontrada. App\Infraestrutura\Repositorios\BankAccount\BankAccountRepositoryImplementation in App\Infraestrutura\Repositorios\BankAccount\BankAccountRepositoryImplementation::getBankAccountByID
 --------------------------------------------------
-17/10/2023 01:05:30 | ERROR | Conta bancária não encontrada. App\Infra\Repositories\BankAccount\BankAccountRepositoryImplementation in App\Infra\Repositories\BankAccount\BankAccountRepositoryImplementation::getBankAccountByID 
+17/10/2023 01:05:30 | ERROR | Conta bancária não encontrada. App\Infraestrutura\Repositorios\BankAccount\BankAccountRepositoryImplementation in App\Infraestrutura\Repositorios\BankAccount\BankAccountRepositoryImplementation::getBankAccountByID
 --------------------------------------------------
-17/10/2023 01:05:53 | ERROR | Conta bancária não encontrada. App\Infra\Repositories\BankAccount\BankAccountRepositoryImplementation in App\Infra\Repositories\BankAccount\BankAccountRepositoryImplementation::getBankAccountByID 
+17/10/2023 01:05:53 | ERROR | Conta bancária não encontrada. App\Infraestrutura\Repositorios\BankAccount\BankAccountRepositoryImplementation in App\Infraestrutura\Repositorios\BankAccount\BankAccountRepositoryImplementation::getBankAccountByID
 --------------------------------------------------
 17/10/2023 01:09:02 | INFO | Boleto emitido com sucesso. Seu número: 821b14d8-0997-462f-a3bb-e58ccbf4107d, Nosso número: 1234567890 Linha digitável: 1234567890123456789012345678906789012345678901234567890 Código de barras: 12345678901234567890123456789012345678906789012345678901234567890. 
 --------------------------------------------------
@@ -11704,13 +11704,13 @@ LINE 5:             order_service_id,
 --------------------------------------------------
 20/10/2023 16:52:59 | INFO | Email enviado com sucesso para o cliente Matheus Fogaça - matheus@email.com 
 --------------------------------------------------
-20/10/2023 16:58:46 | ERROR | Conta bancária não encontrada. App\Infra\Repositories\BankAccount\BankAccountRepositoryImplementation in App\Infra\Repositories\BankAccount\BankAccountRepositoryImplementation::getBankAccountByID 
+20/10/2023 16:58:46 | ERROR | Conta bancária não encontrada. App\Infraestrutura\Repositorios\BankAccount\BankAccountRepositoryImplementation in App\Infraestrutura\Repositorios\BankAccount\BankAccountRepositoryImplementation::getBankAccountByID
 --------------------------------------------------
 20/10/2023 16:58:48 | INFO | NFS-e criada com sucesso no Usecase. 
 --------------------------------------------------
-20/10/2023 16:58:55 | ERROR | Conta bancária não encontrada. App\Infra\Repositories\BankAccount\BankAccountRepositoryImplementation in App\Infra\Repositories\BankAccount\BankAccountRepositoryImplementation::getBankAccountByID 
+20/10/2023 16:58:55 | ERROR | Conta bancária não encontrada. App\Infraestrutura\Repositorios\BankAccount\BankAccountRepositoryImplementation in App\Infraestrutura\Repositorios\BankAccount\BankAccountRepositoryImplementation::getBankAccountByID
 --------------------------------------------------
-20/10/2023 16:58:57 | ERROR | Conta bancária não encontrada. App\Infra\Repositories\BankAccount\BankAccountRepositoryImplementation in App\Infra\Repositories\BankAccount\BankAccountRepositoryImplementation::getBankAccountByID 
+20/10/2023 16:58:57 | ERROR | Conta bancária não encontrada. App\Infraestrutura\Repositorios\BankAccount\BankAccountRepositoryImplementation in App\Infraestrutura\Repositorios\BankAccount\BankAccountRepositoryImplementation::getBankAccountByID
 --------------------------------------------------
 20/10/2023 17:03:14 | INFO | Novo cliente cadastrado com sucesso. (dbd0f051-1a54-4941-a578-da9a1b4ca09d, Matheus Fogaça, matheus@email.com, 841.676.700-97) 
 --------------------------------------------------

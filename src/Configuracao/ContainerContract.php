@@ -15,9 +15,9 @@ use App\Application\Queries\Contract\ContractQueriesUseCase;
 use App\Dominio\Repositorios\BankAccount\BankAccountRepository;
 use App\Dominio\Repositorios\Contract\ContractQueriesRepository;
 use App\Application\Commands\Contract\ContractUseCaseImplementation;
-use App\Infra\Repositories\Contract\ContractRepositoryImplementation;
+use App\Infraestrutura\Repositorios\Contract\ContractRepositoryImplementation;
 use App\Application\Queries\Contract\ContractQueriesUseCaseImplementation;
-use App\Infra\Repositories\Contract\ContractQueriesRepositoryImplementation;
+use App\Infraestrutura\Repositorios\Contract\ContractQueriesRepositoryImplementation;
 
 $pathAutoloader = __DIR__.'/../../vendor/autoload.php';
 

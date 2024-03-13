@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace App\Dominio\Repositorios\Empresa;
 
-use App\Dominio\Repositorios\Empresa\Fronteiras\InputBoundaryCreateNewColaboradorRepo;
+use App\Dominio\Repositorios\Empresa\Fronteiras\EntradaFronteiraNovoColaborador;
 
 interface RepositorioEmpresa
 {
-    public function createNewColaborador(InputBoundaryCreateNewColaboradorRepo $params): void;
+    public function novoColaborador(EntradaFronteiraNovoColaborador $params): void;
 }

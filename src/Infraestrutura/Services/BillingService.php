@@ -12,7 +12,7 @@ use App\Aplicacao\Compartilhado\HTTP\ClientHttp;
 use App\Config\Containerapp;
 use App\Dominio\Entidades\Business\EntidadeUsuarioLogado;
 use App\Dominio\Entidades\Financial\BankAccountEntity;
-use App\Dominio\Repositorios\Autenticacao\Fronteiras\OutputGetAccountByID;
+use App\Dominio\Repositorios\Autenticacao\Fronteiras\SaidaFronteiraBuscarContaPorCodigo;
 use App\Dominio\Repositorios\BankAccount\BankAccountRepository;
 use App\Dominio\Repositorios\BankAccount\Fronteiras\OutputGetBankAccountByID;
 use App\Infraestrutura\Adaptadores\Billing\InterImplementation;
@@ -39,7 +39,7 @@ $container = $containerApp->get([
 
 $eventBus = $container->get(EventBus::class);
 $container->set('businessID', new IdentificacaoUnica('1dd966da-4228-474a-84a7-aa7bb3e37f67'));
-$userLoggedData = new OutputGetAccountByID(
+$userLoggedData = new SaidaFronteiraBuscarContaPorCodigo(
     id: '1dd966da-4228-474a-84a7-aa7bb3e37f67',
     nickname: 'Automático Negócio',
     email: 'email@automatico.negocio',
@@ -63,7 +63,7 @@ $callback = function($message) use ($maximumRetry, &$eventBus, &$container, &$lo
     $body = json_decode($message->body, true);
 
     $container->set('businessID', new IdentificacaoUnica($body['businessID']));
-    $userLoggedData = new OutputGetAccountByID(
+    $userLoggedData = new SaidaFronteiraBuscarContaPorCodigo(
         id: $body['businessID'],
         nickname: 'Automático Negócio',
         email: 'email@automatico.negocio',

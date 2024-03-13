@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Dominio\Entidades\Processo\Fontes;
+namespace App\Dominio\Entidades\Processo\Fontes\Envolvidos;
 
 use App\Dominio\ObjetoValor\IdentificacaoUnica;
 use App\Dominio\ObjetoValor\NomeCompleto;

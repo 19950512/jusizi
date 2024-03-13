@@ -4,9 +4,10 @@ declare(strict_types=1);
 
 namespace App\Infraestrutura\Adaptadores\HTTP;
 
-use App\Aplicacao\Compartilhado\HTTP\ClientHttp;
+use App\Aplicacao\Compartilhado\HTTP\ClienteHTTP;
+use App\Aplicacao\Compartilhado\HTTP\RespostaHTTP;
 
-class CurlClientHttpMOCK implements ClientHttp
+class CurlClientHttpMOCK implements ClienteHTTP
 {
 
     private string $_baseURL = '';
@@ -14,26 +15,14 @@ class CurlClientHttpMOCK implements ClientHttp
     private array $_certificado = [];
 
     public function __construct($config = [])
-    {
-        $this->setConfig($config);
-    }
+    {}
 
-    public function setConfig($config): void
-    {
-        if(isset($config['baseURL'])){
-            $this->_baseURL = $config['baseURL'];
-        }
-        if(isset($config['headers'])){
-            $this->_headers = $config['headers'];
-        }
-        if(isset($config['certificado'])){
-            $this->_certificado = $config['certificado'];
-        }
-    }
+    public function configurar($config): void
+    {}
 
-    public function request($data, $method): ResponseClientHttp
+    public function request($data, $method): RespostaHTTP
     {
-        return new ResponseClientHttp(
+        return new RespostaHTTP(
             code:  200,
             body:  [
                 'r' => 'ok',
@@ -41,9 +30,9 @@ class CurlClientHttpMOCK implements ClientHttp
         );
     }
 
-    public function get($endpoint): ResponseClientHttp
+    public function get($endpoint): RespostaHTTP
     {
-        return new ResponseClientHttp(
+        return new RespostaHTTP(
             code: 200,
             body:  [
                 'r' => 'ok',
@@ -84,9 +73,9 @@ class CurlClientHttpMOCK implements ClientHttp
         );
     }
 
-    public function post($endpoint, $body = []): ResponseClientHttp
+    public function post($endpoint, $body = []): RespostaHTTP
     {
-        return new ResponseClientHttp(
+        return new RespostaHTTP(
             code: 200,
             body: [
                 "access_token" => "wqfqwfqfq",
@@ -114,17 +103,17 @@ class CurlClientHttpMOCK implements ClientHttp
         );
     }
 
-    public function patch($endpoint, $body = []): ResponseClientHttp
+    public function patch($endpoint, $body = []): RespostaHTTP
     {
-        return new ResponseClientHttp(
+        return new RespostaHTTP(
             code: 200,
             body: ['r' => 'ok', 'statusComando' => 'BAXADO?', 'transactionId' => '123213'],
         );
     }
 
-    public function delete($endpoint, $body = []): ResponseClientHttp
+    public function delete($endpoint, $body = []): RespostaHTTP
     {
-        return new ResponseClientHttp(
+        return new RespostaHTTP(
             code:  200,
             body:  [
                 'r' => 'ok',
@@ -132,9 +121,9 @@ class CurlClientHttpMOCK implements ClientHttp
         );
     }
 
-    public function put($endpoint, $body = []): ResponseClientHttp
+    public function put($endpoint, $body = []): RespostaHTTP
     {
-        return new ResponseClientHttp(
+        return new RespostaHTTP(
             code: 200,
             body: ['r' => 'ok', 'statusComando' => 'BAXADO?'],
         );

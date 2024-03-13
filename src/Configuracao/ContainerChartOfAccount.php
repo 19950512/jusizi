@@ -13,9 +13,9 @@ use App\Dominio\Repositorios\ChartOfAccount\ChartOfAccountRepository;
 use App\Application\Queries\ChartOfAccount\ChartOfAccountQueriesUseCase;
 use App\Dominio\Repositorios\ChartOfAccount\ChartOfAccountQueriesRepository;
 use App\Application\Commands\ChartOfAccount\ChartOfAccountUseCaseImplementation;
-use App\Infra\Repositories\ChartOfAccount\ChartOfAccountRepositoryImplementation;
+use App\Infraestrutura\Repositorios\ChartOfAccount\ChartOfAccountRepositoryImplementation;
 use App\Application\Queries\ChartOfAccount\ChartOfAccountQueriesUseCaseImplementation;
-use App\Infra\Repositories\ChartOfAccount\ChartOfAccountQueriesRepositoryImplementation;
+use App\Infraestrutura\Repositorios\ChartOfAccount\ChartOfAccountQueriesRepositoryImplementation;
 
 $pathAutoloader = __DIR__.'/../../vendor/autoload.php';
 

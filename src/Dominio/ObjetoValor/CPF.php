@@ -9,26 +9,26 @@ use Exception;
 
 final class CPF implements DocumentoIdentificacao
 {
-    private string $number;
+    private string $numero;
     function __construct(
-        private string $document_number
+        private readonly string $numeroDocumento
     ){
 
-        if(!self::valido($this->document_number)){
+        if(!self::valido($this->numeroDocumento)){
             throw new Exception('CPF is not valid');
         }
 
-        $this->number = (new Mascara($this->document_number, '###.###.###-##'))->get();
+        $this->numero = (new Mascara($this->numeroDocumento, '###.###.###-##'))->get();
     }
     
     function get(): string {
-        return $this->number;
+        return $this->numero;
     }
 
-    static function valido(string $document_number): bool
+    static function valido(string $numeroDocumento): bool
     {
 
-        $cpf = $document_number;
+        $cpf = $numeroDocumento;
 
         // Verifica se um número foi informado
         if(empty($cpf)) {

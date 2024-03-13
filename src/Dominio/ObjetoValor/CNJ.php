@@ -8,6 +8,8 @@ use Exception;
 
 final class CNJ
 {
+    public string $nome = "Conselho Nacional de Justiça";
+
     public function __construct(
         private string $data = ''
     ){
@@ -54,7 +56,8 @@ final class CNJ
         return $digitoVerificadorExtraido === $digitoVerificadorCalculado;
     }
 
-    public function get(): string {
+    public function get(): string
+    {
         return $this->data;
     }
 }

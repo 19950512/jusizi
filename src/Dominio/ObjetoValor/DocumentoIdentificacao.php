@@ -6,6 +6,6 @@ namespace App\Dominio\ObjetoValor;
 
 interface DocumentoIdentificacao
 {
-    static function valido(string $document_number): bool;
+    static function valido(string $numeroDocumento): bool;
     function get(): string;
 }

@@ -4,12 +4,6 @@ declare(strict_types=1);
 
 namespace App\Infraestrutura\Adaptadores\Log;
 
-use App\Application\Commands\Log\Discord;
-use App\Application\Commands\Log\DiscordChannel;
-use App\Application\Commands\Log\DiscordWebhookToken;
-use App\Application\Commands\Log\Enumerados\Level;
-use App\Aplicacao\Compartilhado\HTTP\ClientHttp;
-use App\Shared\Environment;
 
 class DiscordImplementation implements Discord
 {

@@ -10,27 +10,27 @@ use Exception;
 final class CNPJ implements DocumentoIdentificacao
 {
 
-    private string $number;
+    private string $numero;
     function __construct(
-        private string $document_number
+        private string $numeroDocumento
     ){
 
-        if(!self::valido($this->document_number)){
+        if(!self::valido($this->numeroDocumento)){
             throw new Exception('CNPJ is not valid');
         }
 
-        $this->number = (new Mascara($this->document_number, '##.###.###/####-##'))->get();
+        $this->numero = (new Mascara($this->numeroDocumento, '##.###.###/####-##'))->get();
     }
 
     function get(): string
     {
-        return $this->number;
+        return $this->numero;
     }
 
-    static function valido(string $document_number): bool
+    static function valido(string $numeroDocumento): bool
     {
 
-        $cnpj = $document_number;
+        $cnpj = $numeroDocumento;
 
         $cnpj = preg_replace('/[^0-9]/', '', (string) $cnpj);
         // Valida tamanho

@@ -9,8 +9,8 @@ use App\Dominio\ObjetoValor\IdentificacaoUnica;
 class EntidadeTribunal
 {
     public function __construct(
-        public IdentificacaoUnica $code,
-        public string $id,
+        public IdentificacaoUnica $codigo,
+        public string $codigoTribunal,
         public string $nome,
         public string $sigla,
     ){}

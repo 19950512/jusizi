@@ -23,9 +23,9 @@ use App\Dominio\Repositorios\ChartOfAccount\ChartOfAccountRepository;
 use App\Dominio\Repositorios\Client\ClientRepository;
 use App\Dominio\Repositorios\Contract\ContractRepository;
 use App\Dominio\Repositorios\Token\TokenRepository;
-use App\Infra\Repositories\Billing\BillingQueriesRepositoryImplementation;
-use App\Infra\Repositories\Billing\BillingRepositoryImplementation;
-use App\Infra\Repositories\Business\BusinessRepositoryImplementation;
+use App\Infraestrutura\Repositorios\Billing\BillingQueriesRepositoryImplementation;
+use App\Infraestrutura\Repositorios\Billing\BillingRepositoryImplementation;
+use App\Infraestrutura\Repositorios\Empresa\ImplementacaoRepositorioEmpresa;
 use App\Shared\Environment;
 use App\Shared\EventBus\EventBus;
 use DI\Container;
@@ -58,7 +58,7 @@ return [
     },
     BusinessRepository::class => function(Container $content)
     {
-        return new BusinessRepositoryImplementation(
+        return new ImplementacaoRepositorioEmpresa(
             pdo: $content->get(PDO::class),
         );
     },

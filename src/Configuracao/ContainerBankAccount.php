@@ -14,9 +14,9 @@ use App\Dominio\Repositorios\BankAccount\BankAccountRepository;
 use App\Application\Queries\BankAccount\BankAccountQueriesUseCase;
 use App\Dominio\Repositorios\BankAccount\BankAccountQueriesRepository;
 use App\Application\Commands\BankAccount\BankAccountUseCaseImplementation;
-use App\Infra\Repositories\BankAccount\BankAccountRepositoryImplementation;
+use App\Infraestrutura\Repositorios\BankAccount\BankAccountRepositoryImplementation;
 use App\Application\Queries\BankAccount\BankAccountQueriesUseCaseImplementation;
-use App\Infra\Repositories\BankAccount\BankAccountQueriesRepositoryImplementation;
+use App\Infraestrutura\Repositorios\BankAccount\BankAccountQueriesRepositoryImplementation;
 
 $pathAutoloader = __DIR__.'/../../vendor/autoload.php';
 

@@ -10,7 +10,7 @@ enum Grau: int
     case Segundo = 2;
     case Terceiro = 3;
 
-    public function getFormatado(): string
+    public function porExtenso(): string
     {
         return match ($this) {
             self::Primeiro => 'Primeiro Grau',

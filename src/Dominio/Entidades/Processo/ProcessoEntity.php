@@ -12,7 +12,7 @@ use App\Dominio\Entidades\Processo\Fontes\Fontes;
 class ProcessoEntity
 {
     public function __construct(
-        readonly public IdentificacaoUnica $code,
+        readonly public IdentificacaoUnica $codigo,
         public CNJ $cnj,
         public DateTime $dataInicio,
         public DateTime $dataUltimaMovimentacao,

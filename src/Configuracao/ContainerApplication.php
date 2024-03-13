@@ -23,12 +23,12 @@ use App\Dominio\ObjetoValor\NomeCompleto;
 use App\Dominio\ObjetoValor\HostIP;
 use App\Dominio\ObjetoValor\TextoSimples;
 use App\Infraestrutura\Adaptadores\Billing\InterImplementation;
-use App\Infraestrutura\Adaptadores\HTTP\CurlClientHttp;
+use App\Infraestrutura\Adaptadores\HTTP\ImplementacaoCurlClienteHTTP;
 use App\Infraestrutura\Adaptadores\Log\DiscordImplementation;
 use App\Infraestrutura\Adaptadores\Log\FileLogAdapter;
 use App\Infraestrutura\Adaptadores\NFSe\VincoNFSeImplementation;
 use App\Infra\EventBus\RabbitMQImplementation;
-use App\Infra\Repositories\Token\TokenRepositoryImplementation;
+use App\Infraestrutura\Repositorios\Token\TokenRepositoryImplementation;
 use App\Shared\Environment;
 use App\Shared\EnvironmentImplementation;
 use App\Shared\EventBus\EventBus;
@@ -91,7 +91,7 @@ return [
     },
     ClientHttp::class => function(Container $content)
     {
-        return new CurlClientHttp();
+        return new ImplementacaoCurlClienteHTTP();
     },
     EventBus::class => function(Container $content)
     {

@@ -21,11 +21,11 @@ use App\Application\Commands\Log\Enumerados\Level;
 use App\Application\Commands\Autenticacao\AuthUseCase;
 use App\Application\Entities\Autenticacao\AccountEntity;
 use App\Dominio\Repositorios\Autenticacao\AuthRepository;
-use App\Dominio\Repositorios\Autenticacao\Fronteiras\InputCreateAccount;
+use App\Dominio\Repositorios\Autenticacao\Fronteiras\EntradaFronteiraNovaConta;
 use App\Application\Commands\Autenticacao\Fronteiras\InputBoundaryToken;
-use App\Dominio\Repositorios\Autenticacao\Fronteiras\InputCreateBusiness;
+use App\Dominio\Repositorios\Autenticacao\Fronteiras\EntradaFronteiraNovaEmpresa;
 use App\Application\Commands\Autenticacao\Fronteiras\OutputBoundaryToken;
-use App\Dominio\Repositorios\Autenticacao\Fronteiras\OutputGetAccountByID;
+use App\Dominio\Repositorios\Autenticacao\Fronteiras\SaidaFronteiraBuscarContaPorCodigo;
 use App\Application\Commands\Autenticacao\Fronteiras\InputBoundaryCreateAccount;
 use App\Application\Commands\Autenticacao\Fronteiras\InputBoundaryCreateBusiness;
 use Firebase\JWT\Key;
@@ -98,7 +98,7 @@ class AuthUseCaseImplementation implements AuthUseCase
             throw new Exception('Não foi possível criar a empresa, tente novamente.');
         }
 
-        $paramsNewBusiness = new InputCreateBusiness(
+        $paramsNewBusiness = new EntradaFronteiraNovaEmpresa(
             id: $empresaID->get(),
             name: $params->name
         );
@@ -173,7 +173,7 @@ class AuthUseCaseImplementation implements AuthUseCase
             email: $account_email
         );
 
-        $paramsNewAccount = new InputCreateAccount(
+        $paramsNewAccount = new EntradaFronteiraNovaConta(
             businessID: $params->businessID,
             id: $accountEntity->id->get(),
             nickname: $accountEntity->nickname->get(),
@@ -204,7 +204,7 @@ class AuthUseCaseImplementation implements AuthUseCase
         }
     }
 
-    public function getAccountByID(string $id): OutputGetAccountByID
+    public function getAccountByID(string $id): SaidaFronteiraBuscarContaPorCodigo
     {
         return $this->_authRepository->getAccountByID($id);
     }

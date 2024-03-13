@@ -14,7 +14,7 @@ use App\Application\Commands\Log\Log;
 use App\Application\Commands\Autenticacao\AuthUseCase;
 use App\Dominio\Repositorios\Autenticacao\AuthRepository;
 use App\Application\Commands\Autenticacao\AuthUseCaseImplementation;
-use App\Infra\Repositories\Autenticacao\AuthRepositoryImplementation;
+use App\Infraestrutura\Repositorios\Autenticacao\AuthRepositoryImplementation;
 
 $pathAutoloader = __DIR__.'/../../vendor/autoload.php';
 
