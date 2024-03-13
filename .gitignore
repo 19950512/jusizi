@@ -1,0 +1,13 @@
+vendor/
+.idea/
+composer.lock
+*.cache
+.env
+
+src/Infra/Api/Public/logs.txt
+
+docker/rabbitmq/.erlang.cookie
+
+docker/postgres/mnesia/
+
+docker/rabbitmq/mnesia/

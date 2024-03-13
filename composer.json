@@ -1,0 +1,40 @@
+{
+    "name": "dev/jusizi",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "scripts": {
+        "docker": "docker-compose down && docker-compose --env-file .env up -d"
+    },
+    "authors": [
+        {
+            "name": "Matheus Maydana",
+            "email": "mattmaydana@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "8.3",
+        "php-di/php-di": "^6.4",
+        "firebase/php-jwt": "^6.3",
+        "php-amqplib/php-amqplib": "^3.5",
+        "phpmailer/phpmailer": "^6.8",
+        "ext-pdo": "*",
+        "larapack/dd": "^1.1",
+        "kreait/firebase-php": "^7.0",
+        "google/apiclient": "^2.15.0"
+    },
+    "config": {
+        "platform": {
+            "php": "8.3"
+        },
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "require-dev": {
+        "pestphp/pest": "^2.5",
+        "mockery/mockery": "^1.5"
+    }
+}

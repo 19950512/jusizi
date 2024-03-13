@@ -1,1 +1,16 @@
-# jusizi
+# J U S I Z I
+
+
+### Credenciais Asaas
+```bash
+# Chave API
+$aact_YTU5YTE0M2M2N2I4MTliNzk0YTI5N2U5MzdjNWZmNDQ6OjAwMDAwMDAwMDAwMDA0MDMxOTc6OiRhYWNoXzkxMTY4MTQ0LTA5YWUtNDc0MC1hYmYyLTIyNzU5ZjBkNzUwYQ==
+```
+
+```bash
+# Wallet ID
+705812a1-8f95-4114-b1d9-178f2b367b9a
+```
+
+
+
