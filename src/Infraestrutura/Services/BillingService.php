@@ -9,7 +9,7 @@ require_once __DIR__.'/../../../vendor/autoload.php';
 
 use App\Application\Commands\Share\IdentificacaoUnica;
 use App\Aplicacao\Compartilhado\HTTP\ClientHttp;
-use App\Config\Containerapp;
+use App\Configuracao\Containerapp;
 use App\Dominio\Entidades\Business\EntidadeUsuarioLogado;
 use App\Dominio\Entidades\Financial\BankAccountEntity;
 use App\Dominio\Repositorios\Autenticacao\Fronteiras\SaidaFronteiraBuscarContaPorCodigo;

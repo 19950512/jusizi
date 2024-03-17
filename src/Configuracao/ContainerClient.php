@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Config;
+namespace App\Configuracao;
 
 use App\Application\Commands\Client\ClientUseCase;
 use App\Application\Commands\Client\ClientUseCaseImplementation;

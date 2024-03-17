@@ -16,7 +16,8 @@ class ImplementacaoAmbienteArquivo implements Ambiente
 
     private static array $env = [];
 
-    private static function load(): void {
+    private static function load(): void
+    {
 
         if(!empty(self::$env)){
             return;
@@ -42,7 +43,8 @@ class ImplementacaoAmbienteArquivo implements Ambiente
         }
     }
 
-    public static function get(string $key): string {
+    public static function get(string $key): string
+    {
 
         self::load();
 

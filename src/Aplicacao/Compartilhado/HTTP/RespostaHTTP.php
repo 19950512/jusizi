@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace App\Aplicacao\Compartilhado\HTTP;
 
-final class RespostaHTTP
+final readonly class RespostaHTTP
 {
     public function __construct(
-        readonly public int $code,
-        readonly public string | array $body,
+        public int $code,
+        public string | array $body,
     ){}
 }

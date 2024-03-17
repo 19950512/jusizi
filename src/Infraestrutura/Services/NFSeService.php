@@ -7,7 +7,7 @@ date_default_timezone_set('America/Sao_Paulo');
 
 require_once __DIR__.'/../../../vendor/autoload.php';
 
-use App\Config\Containerapp;
+use App\Configuracao\Containerapp;
 use App\Infra\EventBus\Event;
 use App\Shared\EventBus\EventBus;
 use App\Application\Commands\Log\Log;

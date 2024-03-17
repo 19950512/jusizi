@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Config;
+namespace App\Configuracao;
 
 date_default_timezone_set('America/Sao_Paulo');
 
@@ -29,6 +29,7 @@ final class Containerapp
 
     public static function getInstance(): self
     {
+
         if (self::$instance === null) {
             self::$instance = new self();
         }

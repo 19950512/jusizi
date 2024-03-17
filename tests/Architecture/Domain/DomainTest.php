@@ -1,10 +1,9 @@
 <?php
 
-arch('Domain não pode utilizar nada de nenhuma outra camada')
-    ->expect('App\Domain')
+arch('Dominio não pode utilizar nada de nenhuma outra camada')
+    ->expect('App\Dominio')
     ->not->toUse([
-        'App\Infra',
-        'App\Application',
-        'App\Shared',
-        'App\Config'
+        'App\Infraestrutura',
+        'App\Aplicacao',
+        'App\Configuracao'
     ]);

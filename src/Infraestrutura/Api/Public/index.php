@@ -5,7 +5,7 @@ namespace App\Infra\Api;
 include_once __DIR__.'/../../../Config/autoload.php';
 
 use App\Infra\Api\Router;
-use App\Config\Containerapp;
+use App\Configuracao\Containerapp;
 
 $containerApp = Containerapp::getInstance();
 

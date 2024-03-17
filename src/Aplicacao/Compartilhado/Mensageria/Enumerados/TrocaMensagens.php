@@ -22,7 +22,7 @@ enum TrocaMensagens: string
     case EMISSAO_EMAIL_EXCHANGE = 'emissao_email_exchange';
     case EMISSAO_EMAIL_DLX_EXCHANGE = 'emissao_email_dlq_exchange';
 
-    static public function getExchanges(): array
+    static public function trocasMensagens(): array
     {
         return [
 

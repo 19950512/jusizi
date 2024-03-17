@@ -1,17 +1,16 @@
 <?php
 
-use App\Application\Commands\Share\IdentificacaoUnica;
 use App\Dominio\ObjetoValor\CNPJ;
 use App\Dominio\ObjetoValor\CPF;
 use App\Dominio\ObjetoValor\DocumentoIdentificacao;
 use App\Infra\Api\Controllers\Middlewares\Authorization;
 
-arch('ValueObjects não pode utilizar nenhuma classe de nenhuma camada.')
-    ->expect('App\Dominio\ValueObjects')
+arch('ObjetoValor não pode utilizar nenhuma classe de nenhuma camada.')
+    ->expect('App\Dominio\ObjetoValor')
     ->toUseNothing();
 
-arch('ValueObjects não podem extender nem implementar nada.')
-    ->expect('App\Dominio\ValueObjects')
+arch('ObjetoValor não podem extender nem implementar nada.')
+    ->expect('App\Dominio\ObjetoValor')
     ->toExtendNothing()
     ->toImplementNothing()
     ->ignoring([
@@ -19,33 +18,33 @@ arch('ValueObjects não podem extender nem implementar nada.')
         CNPJ::class
     ]);
 
-arch('ValueObjects precisam necessáriamente ser final')
-    ->expect('App\Dominio\ValueObjects')
+arch('ObjetoValor precisam necessáriamente ser final')
+    ->expect('App\Dominio\ObjetoValor')
     ->toBeFinal()
     ->ignoring([
-        TypeRegisterInterface::class
+	    DocumentoIdentificacao::class
     ]);
 
-arch('ValueObjects não podem extender nada')
-    ->expect('App\Dominio\ValueObjects')
+arch('ObjetoValor não podem extender nada')
+    ->expect('App\Dominio\ObjetoValor')
     ->toExtendNothing();
 
-arch('ValueObjects possuem o método get')
-    ->expect('App\Dominio\ValueObjects')
+arch('ObjetoValor possuem o método get')
+    ->expect('App\Dominio\ObjetoValor')
     ->toHaveMethod('get');
 
-arch('ValueObjects possuem construtor publico')
-    ->expect('App\Dominio\ValueObjects')
+arch('ObjetoValor possuem construtor publico')
+    ->expect('App\Dominio\ObjetoValor')
     ->toHaveConstructor()
     ->ignoring([
-        TypeRegisterInterface::class
+	    DocumentoIdentificacao::class
     ]);
 
-arch('ValueObjects podem ser utilizados somente em App\Domain ou App\Application exceto Authorization (Middleware).')
-    ->expect('App\Dominio\ValueObjects')
+arch('ObjetoValor podem ser utilizados somente em App\Domain ou App\Aplicacao exceto Authorization (Middleware).')
+    ->expect('App\Dominio\ObjetoValor')
     ->toOnlyBeUsedIn([
-        'App\Domain',
-        'App\Application'
+        'App\Dominio',
+        'App\Aplicacao'
     ])
     ->ignoring([
         Authorization::class

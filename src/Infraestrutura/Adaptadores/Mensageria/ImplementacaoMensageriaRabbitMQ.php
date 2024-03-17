@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace App\Infraestrutura\Adaptadores\Mensageria;
 
-use App\Aplicacao\Compartilhado\Mensageria\Enumerados\Event;
-use App\Aplicacao\Compartilhado\Mensageria\Enumerados\Exchange;
-use App\Aplicacao\Compartilhado\Mensageria\Enumerados\Queue;
+use App\Aplicacao\Compartilhado\Ambiente\Ambiente;
+use App\Aplicacao\Compartilhado\Mensageria\Enumerados\Evento;
+use App\Aplicacao\Compartilhado\Mensageria\Enumerados\Fila;
+use App\Aplicacao\Compartilhado\Mensageria\Enumerados\TrocaMensagens;
 use App\Aplicacao\Compartilhado\Mensageria\Mensageria;
-use App\Shared\Environment;
 use Exception;
 use PhpAmqpLib\Channel\AMQPChannel;
 use PhpAmqpLib\Connection\AMQPStreamConnection;
@@ -17,7 +17,7 @@ use PhpAmqpLib\Exception\AMQPRuntimeException;
 use PhpAmqpLib\Message\AMQPMessage;
 use PhpAmqpLib\Wire\AMQPTable;
 
-class RabbitMQImplementation implements Mensageria
+class ImplementacaoMensageriaRabbitMQ implements Mensageria
 {
 
     private AMQPStreamConnection $connection;
@@ -25,7 +25,7 @@ class RabbitMQImplementation implements Mensageria
 
     public function __construct(
         private string | bool $host,
-        private Environment $env
+        private Ambiente $env
     ){
 
         $host = $this->env->get('EVENT_BUS_HOST');
@@ -70,10 +70,10 @@ class RabbitMQImplementation implements Mensageria
         $this->channel = $this->connection->channel();
     }
 
-    public function publish(Event $event, string $message): void
+    public function publicar(Evento $evento, string $message): void
     {
 
-        $queue = $event->getQueue();
+        $queue = $evento->Filas();
 
         $mensagem = new AMQPMessage(
             body: $message,
@@ -103,9 +103,10 @@ class RabbitMQImplementation implements Mensageria
         }
     }
 
-    public function subscribe(Event $event, callable $callback): void
+    public function inscrever(Evento $evento, callable $retrochamada): void
     {
-        $queue = $event->getQueue();
+
+        $queue = $evento->Filas();
 
         $this->channel->basic_qos(
             prefetch_size: null,
@@ -118,7 +119,7 @@ class RabbitMQImplementation implements Mensageria
             $this->channel->basic_consume(
                 queue: $queue->value,
                 no_ack: false,
-                callback: $callback
+                callback: $retrochamada
             );
 
             /*
@@ -147,40 +148,40 @@ class RabbitMQImplementation implements Mensageria
     }
 
 
-    public function removeQueues(): void
+    public function deletarFilas(): void
     {
-        $queues = Queue::getQueues();
+        $queues = Fila::Filas();
 
         foreach($queues as $queue){
             $this->channel->queue_delete($queue['queue']->value);
         }
     }
 
-    public function removeExchanges(): void
+    public function deletarTrocaMensagens(): void
     {
-        $exchanges = Exchange::getExchanges();
+        $exchanges = TrocaMensagens::trocasMensagens();
 
         foreach($exchanges as $exchange){
             $this->channel->exchange_delete($exchange['exchange']->value);
         }
     }
 
-    public function createQueues(): void
+    public function criarFilas(): void
     {
         // Create the exchanges
-        $this->exchange_declares();
+        $this->declarar_trocas_mensagens();
 
         // Create the queues
-        $this->queue_declares();
+        $this->declarar_filas();
 
         // Bind the queues to the exchanges
-        $this->queue_binds();
+        $this->ligar_filas();
     }
 
-    private function exchange_declares(): void
+    private function declarar_trocas_mensagens(): void
     {
 
-        foreach(Exchange::getExchanges() as $exchange){
+        foreach(TrocaMensagens::trocasMensagens() as $exchange){
 
             $this->channel->exchange_declare(
                 exchange: $exchange['exchange']->value,
@@ -191,13 +192,13 @@ class RabbitMQImplementation implements Mensageria
         }
     }
 
-    private function queue_declares(): void
+    private function declarar_filas(): void
     {
 
-        foreach(Queue::getQueues() as $queue){
+        foreach(Fila::Filas() as $queue){
 
             $argumentsDLX = [];
-            if(isset($queue['dlx']) and is_a($queue['dlx'], Exchange::class)){
+            if(isset($queue['dlx']) and is_a($queue['dlx'], TrocaMensagens::class)){
                 $argumentsDLX['x-dead-letter-exchange'] = $queue['dlx']->value;
                 // Outros argumentos, se necessário
             }
@@ -211,12 +212,12 @@ class RabbitMQImplementation implements Mensageria
         }
     }
 
-    private function queue_binds(): void
+    private function ligar_filas(): void
     {
 
-        foreach(Queue::getBinds() as $bind){
+        foreach(Fila::Ligacoes() as $bind){
 
-            if(!is_a($bind['queue'], Queue::class) OR !is_a($bind['exchange'], Exchange::class)){
+            if(!is_a($bind['queue'], Fila::class) OR !is_a($bind['exchange'], TrocaMensagens::class)){
                 throw new Exception("A fila {$bind['queue']->value} não pode ser vinculada a troca {$bind['exchange']->value}");
             }
 

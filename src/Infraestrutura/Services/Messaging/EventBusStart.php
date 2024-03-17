@@ -8,7 +8,7 @@ date_default_timezone_set('America/Sao_Paulo');
 require_once __DIR__.'/../../../vendor/autoload.php';
 
 use App\Aplicacao\Compartilhado\Mensageria\Mensageria;
-use App\Config\Containerapp;
+use App\Configuracao\Containerapp;
 
 $containerApp = Containerapp::getInstance();
 

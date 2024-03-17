@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Config;
+namespace App\Configuracao;
 
 use App\Dominio\Repositorios\Client\ClientRepository;
 use PDO;
