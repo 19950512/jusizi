@@ -6,7 +6,8 @@ namespace App\Aplicacao\Comandos\Autenticacao\Login\EmailESenha;
 
 use App\Aplicacao\Comandos\Comando;
 use App\Dominio\ObjetoValor\Email;
-use Mockery\Exception;
+use Exception;
+use Override;
 
 final readonly class ComandoLoginEmailESenha implements Comando
 {
@@ -18,11 +19,19 @@ final readonly class ComandoLoginEmailESenha implements Comando
 		private string $senha
 	){}
 
-	#[\Override] public function executar(): void
+	#[Override] public function executar(): void
 	{
 
 		$limiteMaximoCaracteresSenha = 50;
 		$limiteMinimoCaracteresSenha = 9;
+
+		if(empty($this->email)){
+			throw new Exception('O e-mail precisa ser informado adequadamente.');
+		}
+
+		if(empty($this->senha)){
+			throw new Exception('A senha precisa ser informada adequadamente.');
+		}
 
 		if(strlen($this->senha) < $limiteMinimoCaracteresSenha){
 			throw new Exception("A senha precisa ter no mínimo $limiteMinimoCaracteresSenha caracteres.");
@@ -51,5 +60,4 @@ final readonly class ComandoLoginEmailESenha implements Comando
 	{
 		return $this->senhaPronto;
 	}
-
 }
