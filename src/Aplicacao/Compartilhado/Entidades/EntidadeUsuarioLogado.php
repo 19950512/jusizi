@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace App\Dominio\Entidades\Empresa;
+namespace App\Aplicacao\Compartilhado\Entidades;
 
-use App\Dominio\Repositorios\Autenticacao\Fronteiras\SaidaFronteiraBuscarContaPorCodigo;
 use App\Dominio\ObjetoValor\Email;
-use App\Dominio\ObjetoValor\NomeCompleto;
 use App\Dominio\ObjetoValor\IdentificacaoUnica;
+use App\Dominio\ObjetoValor\NomeCompleto;
+use App\Dominio\Repositorios\Autenticacao\Fronteiras\SaidaFronteiraBuscarContaPorCodigo;
 use Exception;
 
 class EntidadeUsuarioLogado

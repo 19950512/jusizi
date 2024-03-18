@@ -17,24 +17,31 @@ use App\Dominio\ObjetoValor\NomeCompleto;
 use App\Dominio\ObjetoValor\TextoSimples;
 use App\Dominio\ObjetoValor\DocumentoIdentificacao;
 use App\Dominio\ObjetoValor\IdentificacaoUnica;
+use Mockery\Exception;
 
 class EntidadeEmpresarial
 {
     public function __construct(
-        public IdentificacaoUnica $code,
-        public NomeCompleto $tradeName,
-        public DocumentoIdentificacao $document,
-        public Endereco $address,
+        public IdentificacaoUnica $codigo,
+        public NomeCompleto $nomeCompleto,
+        public DocumentoIdentificacao $numeroDocumento,
+        public Endereco $endereco,
     ){}
 
     public static function instanciarEntidadeEmpresarial(SaidaFronteiraEmpresa $params): EntidadeEmpresarial
     {
 
+		try {
+			$nomeCompleto = new NomeCompleto($params->nome);
+		}catch (Exception $erro){
+			throw new Exception("O nome completo da Entidade Empresarial '{$params->nome}' ID: $params->empresaCodigo não está válido. {$erro->getMessage()}");
+		}
+
         return new EntidadeEmpresarial(
-            code: new IdentificacaoUnica($params->empresaCodigo),
-            tradeName: new NomeCompleto('Teste Aqui'),
-            document: new CNPJ('70174202000135'),
-            address:  new Endereco(
+            codigo: new IdentificacaoUnica($params->empresaCodigo),
+	        nomeCompleto: $nomeCompleto,
+            numeroDocumento: new CNPJ('70174202000135'),
+            endereco:  new Endereco(
                 rua: new TextoSimples(''),
                 numero: new TextoSimples(''),
                 bairro: new TextoSimples(''),
