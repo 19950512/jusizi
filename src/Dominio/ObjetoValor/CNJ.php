@@ -6,10 +6,11 @@ namespace App\Dominio\ObjetoValor;
 
 use Exception;
 
-final class CNJ
+final readonly class CNJ
 {
-    public string $nome = "Conselho Nacional de Justiça";
+    public string $nome;
 
+	private string $value;
     public function __construct(
         private string $data = ''
     ){
@@ -17,7 +18,8 @@ final class CNJ
         if(!$this->validarNumeroUnicoProcesso($this->data)){
             throw new Exception('Número único de processo (CNJ) inválido. - ' . $this->data);
         }
-        $this->data = $this->data;
+        $this->value = $this->data;
+	    $this->nome = "Conselho Nacional de Justiça";
     }
 
     private function validarNumeroUnicoProcesso($numero): bool
@@ -58,6 +60,6 @@ final class CNJ
 
     public function get(): string
     {
-        return $this->data;
+        return $this->value;
     }
 }

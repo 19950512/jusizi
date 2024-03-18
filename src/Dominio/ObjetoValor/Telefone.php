@@ -6,19 +6,25 @@ namespace App\Dominio\ObjetoValor;
 
 use Exception;
 
-final class Telefone
+final readonly class Telefone
 {
+
+	private string $value;
     function __construct(
         private string $numero
     ){
-        if(!$this->_validation($this->numero)){
-            throw new Exception('O número do telefone informado ("'.$this->numero.'") não é válido.');
+
+		$numero = $this->numero;
+        if(!$this->_validation($numero)){
+            throw new Exception('O número do telefone informado ("'.$numero.'") não é válido.');
         }
 
-        $this->numero = (new Mascara(
-            value: $this->numero,
-            mask: '(##) #####-####'
+        $numero = (new Mascara(
+            texto: $numero,
+            mascara: '(##) #####-####'
         ))->get();
+
+		$this->value = $numero;
     }
 
     private function _validation(string $number): bool
@@ -28,6 +34,6 @@ final class Telefone
 
     function get(): string
     {
-        return $this->numero;
+        return $this->value;
     }
 }

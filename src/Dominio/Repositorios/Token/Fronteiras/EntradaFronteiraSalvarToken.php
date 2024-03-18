@@ -12,8 +12,5 @@ final readonly class EntradaFronteiraSalvarToken
         public string $bancoNome,
         public string $tempoExpiracao,
         public string $expirarEm,
-        public string $tokenRefresh,
-        public string $tokenEscopo,
-        public string $tokenTipo
     ){}
 }

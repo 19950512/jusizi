@@ -17,7 +17,7 @@ use PhpAmqpLib\Exception\AMQPRuntimeException;
 use PhpAmqpLib\Message\AMQPMessage;
 use PhpAmqpLib\Wire\AMQPTable;
 
-class ImplementacaoMensageriaRabbitMQ implements Mensageria
+readonly class ImplementacaoMensageriaRabbitMQ implements Mensageria
 {
 
     private AMQPStreamConnection $connection;
@@ -200,7 +200,6 @@ class ImplementacaoMensageriaRabbitMQ implements Mensageria
             $argumentsDLX = [];
             if(isset($queue['dlx']) and is_a($queue['dlx'], TrocaMensagens::class)){
                 $argumentsDLX['x-dead-letter-exchange'] = $queue['dlx']->value;
-                // Outros argumentos, se necessário
             }
 
             $this->channel->queue_declare(

@@ -7,11 +7,11 @@ namespace App\Dominio\ObjetoValor;
 use App\Dominio\ObjetoValor\DocumentoIdentificacao;
 use Exception;
 
-final class CPF implements DocumentoIdentificacao
+final readonly class CPF implements DocumentoIdentificacao
 {
     private string $numero;
     function __construct(
-        private readonly string $numeroDocumento
+        private string $numeroDocumento
     ){
 
         if(!self::valido($this->numeroDocumento)){
@@ -21,7 +21,8 @@ final class CPF implements DocumentoIdentificacao
         $this->numero = (new Mascara($this->numeroDocumento, '###.###.###-##'))->get();
     }
     
-    function get(): string {
+    function get(): string
+    {
         return $this->numero;
     }
 

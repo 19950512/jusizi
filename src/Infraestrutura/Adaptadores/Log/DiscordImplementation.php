@@ -5,6 +5,8 @@ declare(strict_types=1);
 namespace App\Infraestrutura\Adaptadores\Log;
 
 
+use App\Aplicacao\Compartilhado\HTTP\ClienteHTTP;
+
 class DiscordImplementation implements Discord
 {
 
@@ -13,8 +15,8 @@ class DiscordImplementation implements Discord
     public DiscordChannel $channel;
 
     public function __construct(
-        readonly private ClientHttp $_clientHTTP,
-        readonly private Environment $env,
+        readonly private ClienteHTTP $_clientHTTP,
+        readonly private Ambiente $env,
     ){
 
         $this->configDefault();

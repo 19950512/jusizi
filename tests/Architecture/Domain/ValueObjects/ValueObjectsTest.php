@@ -3,7 +3,7 @@
 use App\Dominio\ObjetoValor\CNPJ;
 use App\Dominio\ObjetoValor\CPF;
 use App\Dominio\ObjetoValor\DocumentoIdentificacao;
-use App\Infra\Api\Controllers\Middlewares\Authorization;
+use App\Infraestrutura\APIs\Api\Controladores\Middlewares\Authorization;
 
 arch('ObjetoValor não pode utilizar nenhuma classe de nenhuma camada.')
     ->expect('App\Dominio\ObjetoValor')

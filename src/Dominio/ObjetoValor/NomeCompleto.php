@@ -6,15 +6,17 @@ namespace App\Dominio\ObjetoValor;
 
 use Exception;
 
-final class NomeCompleto {
+final readonly class NomeCompleto {
 
+	private string $value;
     function __construct(
         private string $nome
     ){
 
-        $this->nome = mb_convert_case($this->nome, MB_CASE_LOWER, 'UTF-8');
+		$nome = $this->nome;
+        $nome = mb_convert_case($nome, MB_CASE_LOWER, 'UTF-8');
 
-        $this->nome = ucwords($this->nome);
+        $nome = ucwords($nome);
 
         $mustache = [
             ' Da ' => ' da ',
@@ -24,11 +26,13 @@ final class NomeCompleto {
             ' Du ' => ' du ',
         ];
 
-        $this->nome = str_replace(array_keys($mustache), array_values($mustache), $this->nome);
+        $nome = str_replace(array_keys($mustache), array_values($mustache), $nome);
 
-        if(!self::validation($this->nome)){
-            throw new Exception("Nome completo informado está inválido. ({$this->nome})");
+        if(!self::validation($nome)){
+            throw new Exception("Nome completo informado está inválido. ({$nome})");
         }
+
+		$this->value = $nome;
     }
 
     static function validation(string $name): bool
@@ -42,6 +46,6 @@ final class NomeCompleto {
 
     public function get(): string
     {
-        return $this->nome;
+        return $this->value;
     }
 }

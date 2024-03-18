@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Dominio\Repositorios\Autenticacao\Fronteiras;
 
-final class EntradaFronteiraNovaConta
+final readonly class EntradaFronteiraNovaConta
 {
     public function __construct(
         public string $empresaCodigo,

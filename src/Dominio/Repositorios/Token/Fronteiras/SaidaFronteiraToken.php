@@ -10,8 +10,6 @@ final readonly class SaidaFronteiraToken
         public string $codigo,
         public string $token,
         public string $expiraEm,
-        public string $tokenRefresh,
-        public string $tokenExpirationTime,
         public string $tokenMomentoCriacao
     ){}
 }

@@ -7,7 +7,7 @@ namespace App\Dominio\ObjetoValor;
 use App\Dominio\ObjetoValor\DocumentoIdentificacao;
 use Exception;
 
-final class CNPJ implements DocumentoIdentificacao
+final readonly class CNPJ implements DocumentoIdentificacao
 {
 
     private string $numero;

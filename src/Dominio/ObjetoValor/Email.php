@@ -6,8 +6,9 @@ namespace App\Dominio\ObjetoValor;
 
 use Exception;
 
-final class Email
+final readonly class Email
 {
+	private string $value;
     public function __construct(
         private string $email
     ){
@@ -15,11 +16,11 @@ final class Email
             throw new Exception("O e-mail informado não é válido. (".$this->email.")");
         }
 
-        $this->email = strtolower($this->email);
+        $this->value = strtolower($this->email);
     }
 
     function get(): string
     {
-        return $this->email;
+        return $this->value;
     }
 }
