@@ -17,12 +17,12 @@ use App\Dominio\ObjetoValor\NomeCompleto;
 use App\Dominio\ObjetoValor\TextoSimples;
 use App\Dominio\ObjetoValor\DocumentoIdentificacao;
 use App\Dominio\ObjetoValor\IdentificacaoUnica;
-use Mockery\Exception;
+use Exception;
 
 class EntidadeEmpresarial
 {
     public function __construct(
-        public IdentificacaoUnica $codigo,
+        readonly public IdentificacaoUnica $codigo,
         public NomeCompleto $nomeCompleto,
         public DocumentoIdentificacao $numeroDocumento,
         public Endereco $endereco,
@@ -40,7 +40,7 @@ class EntidadeEmpresarial
         return new EntidadeEmpresarial(
             codigo: new IdentificacaoUnica($params->empresaCodigo),
 	        nomeCompleto: $nomeCompleto,
-            numeroDocumento: new CNPJ('70174202000135'),
+            numeroDocumento: new CNPJ($params->numeroDocumento),
             endereco:  new Endereco(
                 rua: new TextoSimples(''),
                 numero: new TextoSimples(''),
@@ -62,10 +62,10 @@ class EntidadeEmpresarial
     public function toArray(): array
     {
         return [
-            'codigo' => $this->code->get(),
-            'nomeFantasia' => $this->tradeName->get(),
-            'documentoTipo' => is_a($this->document, CNPJ::class) ? 'CNPJ' : 'CPF',
-            'documentoNumero' => $this->document->get(),
+            'codigo' => $this->codigo->get(),
+            'nomeFantasia' => $this->nomeCompleto->get(),
+            'documentoTipo' => is_a($this->numeroDocumento, CNPJ::class) ? 'CNPJ' : 'CPF',
+            'documentoNumero' => $this->numeroDocumento->get(),
         ];
     }
 }

@@ -9,5 +9,6 @@ final readonly class SaidaFronteiraEmpresa
     public function __construct(
         public string $empresaCodigo,
         public string $nome,
+	    public string $numeroDocumento
     ){}
 }

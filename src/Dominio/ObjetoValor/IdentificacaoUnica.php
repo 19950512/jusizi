@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace App\Dominio\ObjetoValor;
 
+use Exception;
+
 final readonly class IdentificacaoUnica {
 
 	private string $value;
@@ -19,14 +21,18 @@ final readonly class IdentificacaoUnica {
 		$data = $this->data;
 
         // Generate 16 bytes (128 bits) of random data or use the data passed into the function.
-        $data = !empty($data) ? $data : random_bytes(16);
+        $data = !empty($data) ? $data : throw new Exception('O código informado está inválido. (' . $data . ')');
+
+		if(strlen($data) < 8){
+			throw new Exception('O código informado está inválido. (' . $data . ')');
+		}
         assert(strlen($data) == 16);
     
         // Set version to 0100
         $data[6] = chr(ord($data[6]) & 0x0f | 0x40);
         // Set bits 6-7 to 10
         $data[8] = chr(ord($data[8]) & 0x3f | 0x80);
-    
+
         // Output the 36 character UUID.
         $data = vsprintf('%s%s-%s-%s-%s-%s%s%s', str_split(bin2hex($data), 4));
 		$this->value = $data;
