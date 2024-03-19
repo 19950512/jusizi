@@ -33,14 +33,14 @@ test('Lança Exception quando tenta instanciar uma Empresa com nome inválido', 
 
 test('Lança Exception quando tenta instanciar uma Empresa com código inválido', function(){
 	$params = new SaidaFronteiraEmpresa(
-		empresaCodigo: '',
+		empresaCodigo: '1234567',
 	    nome: 'Teste Empresa',
 		numeroDocumento: '03623589000172'
 	);
 
 	$entidadeEmpresarial = EntidadeEmpresarial::instanciarEntidadeEmpresarial($params);
 })
-	->throws('O código informado está inválido. ()')
+	->throws('O código informado está inválido. (1234567)')
 	->group('EntidadeEmpresarial');
 
 test('Lança Exception quando tenta instanciar uma Empresa com nome inválido com 1 palavra', function(){

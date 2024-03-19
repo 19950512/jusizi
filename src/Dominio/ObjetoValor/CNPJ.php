@@ -16,7 +16,7 @@ final readonly class CNPJ implements DocumentoIdentificacao
     ){
 
         if(!self::valido($this->numeroDocumento)){
-            throw new Exception('CNPJ is not valid');
+            throw new Exception('O CNPJ informado não é válido. '.$this->numeroDocumento);
         }
 
         $this->numero = (new Mascara($this->numeroDocumento, '##.###.###/####-##'))->get();

@@ -16,9 +16,9 @@ final readonly class CNJ
     ){
 
         if(!$this->validarNumeroUnicoProcesso($this->data)){
-            throw new Exception('Número único de processo (CNJ) inválido. - ' . $this->data);
+            throw new Exception('O número Conselho Nacional de Justiça (CNJ) está inválido. - ' . $this->data);
         }
-        $this->value = $this->data;
+        $this->value = (new Mascara($this->data, '#######-##.####.#.##.####'))->get();
 	    $this->nome = "Conselho Nacional de Justiça";
     }
 

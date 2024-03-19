@@ -15,7 +15,7 @@ final readonly class CPF implements DocumentoIdentificacao
     ){
 
         if(!self::valido($this->numeroDocumento)){
-            throw new Exception('CPF is not valid');
+            throw new Exception('O CPF informado não é váliodo. ' . $this->numeroDocumento);
         }
 
         $this->numero = (new Mascara($this->numeroDocumento, '###.###.###-##'))->get();

@@ -20,12 +20,14 @@ final readonly class IdentificacaoUnica {
 
 		$data = $this->data;
 
-        // Generate 16 bytes (128 bits) of random data or use the data passed into the function.
-        $data = !empty($data) ? $data : throw new Exception('O código informado está inválido. (' . $data . ')');
+		if(empty($data)){
+			$data = random_bytes(16);
+		}
 
 		if(strlen($data) < 8){
 			throw new Exception('O código informado está inválido. (' . $data . ')');
 		}
+
         assert(strlen($data) == 16);
     
         // Set version to 0100
