@@ -29,11 +29,17 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-php-
 
+    - name: Setup PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: 8.3
+        extensions: mbstring, pdo, curl  # Adicione outras extensões PHP que seu projeto precisa
+
     - name: Install dependencies
       run: composer install --prefer-dist --no-progress
-
-    - name: Unit Tests
-      run: php8.3 vendor/bin/pest
+      
+    - name: Run Pest Tests
+      run: vendor/bin/pest
 
     # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
     # Docs: https://getcomposer.org/doc/articles/scripts.md
