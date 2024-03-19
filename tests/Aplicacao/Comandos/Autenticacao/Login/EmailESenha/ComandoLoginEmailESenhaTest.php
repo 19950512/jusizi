@@ -52,3 +52,28 @@ test('A senha precisa ter no máximo 50 caracteres', function(){
 	->throws('A senha atingiu o limite máximo de 50 caracteres.')
 	->group('ComandoLoginEmailESenha');
 
+test('O e-mail precisa ser válido.', function(){
+
+	$comandLoginEmailESenha = new ComandoLoginEmailESenha(
+		email: 'emailteste.com',
+		senha: '123456789'
+	);
+
+	$comandLoginEmailESenha->executar();
+})
+	->throws('O e-mail informado está inválido. O e-mail informado não é válido. (emailteste.com)')
+	->group('ComandoLoginEmailESenha');
+
+test('O e-email e a senha são válidos.', function(){
+
+	$comandLoginEmailESenha = new ComandoLoginEmailESenha(
+		email: 'matheus@email.com',
+		senha: '123456789'
+	);
+
+	$comandLoginEmailESenha->executar();
+
+	expect($comandLoginEmailESenha->obterEmail())->toBe('matheus@email.com');
+	expect($comandLoginEmailESenha->obterSenha())->toBe('123456789');
+})
+	->group('ComandoLoginEmailESenha');
