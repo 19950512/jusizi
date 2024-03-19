@@ -33,7 +33,7 @@ jobs:
       run: composer install --prefer-dist --no-progress
 
     - name: Unit Tests
-      run: php vendor/bin/pest
+      run: php8.3 vendor/bin/pest
 
     # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
     # Docs: https://getcomposer.org/doc/articles/scripts.md
