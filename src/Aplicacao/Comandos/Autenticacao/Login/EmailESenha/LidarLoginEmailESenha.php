@@ -14,16 +14,15 @@ readonly class LidarLoginEmailESenha implements Lidar
 	#[Override] public function lidar(Comando $comando): void
 	{
 
-		if(is_a($comando, ComandoLoginEmailESenha::class)){
-
-			$email = $comando->obterEmail();
-			$senha = $comando->obterSenha();
-
-			$hashSenha = password_hash($senha, PASSWORD_ARGON2I);
-
-			// ...
+		if(!is_a($comando, ComandoLoginEmailESenha::class)){
+			throw new Exception("Ops, não sei lidar com esse comando.");
 		}
 
-		throw new Exception("Ops, não sei lidar com esse comando.");
+		$email = $comando->obterEmail();
+		$senha = $comando->obterSenha();
+
+		$hashSenha = password_hash($senha, PASSWORD_ARGON2I);
+
+		// ...
 	}
 }
