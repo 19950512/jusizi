@@ -14,7 +14,7 @@ final class CEP
     )
     {
         if(!self::validation($this->cep)){
-            throw new Exception('CEP is not valid');
+            throw new Exception('O CEP informado não é válido. ('.$this->cep.')');
         }
 
         $this->cep = (new Mascara($this->cep, '#####-###'))->get();

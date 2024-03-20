@@ -8,7 +8,8 @@
         }
     },
     "scripts": {
-        "docker": "docker-compose down && docker-compose --env-file .env up -d"
+        "docker": "docker-compose down && docker-compose --env-file .env up -d",
+        "coverage": "php8.3 vendor/bin/pest --coverage --coverage-html coverage"
     },
     "authors": [
         {

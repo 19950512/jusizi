@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Dominio\Entidades\Processo\Fontes\Envolvidos;
 
+use App\Dominio\ObjetoValor\DocumentoIdentificacao;
 use App\Dominio\ObjetoValor\IdentificacaoUnica;
 use App\Dominio\ObjetoValor\NomeCompleto;
 use App\Dominio\Entidades\Processo\Fontes\Envolvidos\Enumerados\Polo;
@@ -12,13 +13,12 @@ use App\Dominio\Entidades\Processo\Fontes\Envolvidos\Enumerados\Natureza;
 
 class EntidadeEnvolvido
 {
-
     public function __construct(
-        public IdentificacaoUnica $code,
-        public NomeCompleto $nome,
+        public IdentificacaoUnica $codigo,
+        public NomeCompleto $nomeCompleto,
         public int $quantidadeProcessos,
         public Natureza $tipoNatureza,
-        public string $documento,
+        public DocumentoIdentificacao $documento,
         public Tipo $tipo,
         public Polo $polo
     ){}

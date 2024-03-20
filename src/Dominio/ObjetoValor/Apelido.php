@@ -35,12 +35,8 @@ final class Apelido
     static function validation(string $nome): bool
     {
         $nome = str_replace('  ', ' ', $nome);
-
-        if(!is_string($nome)){
-            return false;
-        }
-
-        return true;
+        $padrao = "/^[a-zA-Z0-9\s]+$/";
+        return !!preg_match($padrao, $nome);
     }
 
     public function get(): string

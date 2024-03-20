@@ -15,16 +15,16 @@ use App\Dominio\ObjetoValor\Endereco\Localizacao\Localizacao;
 final class Endereco
 {
     public function __construct(
-        public TextoSimples $rua,
-        public TextoSimples $numero,
-        public TextoSimples $bairro,
-        public TextoSimples $cidade,
-        public Estado $estado,
-        public Pais $pais,
-        public CEP $cep,
-        public TextoSimples $complemento,
-        public TextoSimples $referencia,
-        public Localizacao $localizacao,
+        public ?TextoSimples $rua = null,
+        public ?TextoSimples $numero = null,
+        public ?TextoSimples $bairro = null,
+        public ?TextoSimples $cidade = null,
+        public ?Estado $estado = null,
+        public ?Pais $pais = null,
+        public ?CEP $cep = null,
+        public ?TextoSimples $complemento = null,
+        public ?TextoSimples $referencia = null,
+        public ?Localizacao $localizacao = null,
     ){}
 
     public function setParams(array $params): void
@@ -86,19 +86,46 @@ final class Endereco
         $this->localizacao = $localizacao;
     }
 
+	public function enderecoCompleto(): string
+	{
+		$informacoes = [];
+		if(is_a($this->rua, TextoSimples::class)){
+			$informacoes[] = $this->rua->get();
+		}
+		if(is_a($this->numero, TextoSimples::class)){
+			$informacoes[] = $this->numero->get();
+		}
+		if(is_a($this->bairro, TextoSimples::class)){
+			$informacoes[] = $this->bairro->get();
+		}
+		if(is_a($this->cidade, TextoSimples::class)){
+			$informacoes[] = $this->cidade->get();
+		}
+		if(is_a($this->estado, Estado::class)){
+			$informacoes[] = $this->estado->getFull();
+		}
+		if(is_a($this->pais, Pais::class)){
+			$informacoes[] = $this->pais->getFull();
+		}
+		if(is_a($this->cep, CEP::class)){
+			$informacoes[] = $this->cep->get();
+		}
+		return implode(', ', $informacoes);
+	}
+
     public function get(): array
     {
         return [
-            'logradouro' => $this->rua->get(),
-            'numero' => $this->numero->get(),
-            'bairro' => $this->bairro->get(),
-            'cidade' => $this->cidade->get(),
-            'estado' => $this->estado->get(),
-            'pais' => $this->pais->get(),
-            'cep' => $this->cep->get(),
-            'complemento' => $this->complemento->get(),
-            'referencia' => $this->referencia->get(),
-            'localizacao' => $this->localizacao->get(),
+            'rua' => is_a($this->rua, TextoSimples::class) ? $this->rua->get() : '',
+            'numero' => is_a($this->rua, TextoSimples::class) ? $this->numero->get() : '',
+            'bairro' => is_a($this->numero, TextoSimples::class) ? $this->bairro->get() : '',
+            'cidade' => is_a($this->bairro, TextoSimples::class) ? $this->cidade->get() : '',
+            'estado' => is_a($this->estado, Estado::class) ? $this->estado->get() : '',
+            'pais' => is_a($this->pais, Pais::class) ? $this->pais->get() : '',
+            'cep' => is_a($this->cep, CEP::class) ? $this->cep->get() : '',
+            'complemento' => is_a($this->complemento, TextoSimples::class) ? $this->complemento->get() : '',
+            'referencia' => is_a($this->referencia, TextoSimples::class) ? $this->referencia->get() : '',
+            'localizacao' => is_a($this->localizacao, Localizacao::class) ? $this->localizacao->get() : '',
         ];
     }
 }

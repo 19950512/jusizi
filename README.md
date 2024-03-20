@@ -17,7 +17,7 @@ O design do projeto é baseado em DDD (Domain Driven Design), com a separação 
 ## Testes
 
 O projeto está sendo desenvolvido utilizando o Pest como framework de testes.
-A Cobertura de testes pode ser visualizada [aqui - Coverage](https://19950512.github.io/jusizi/dashboard.html).
+A Cobertura de testes pode ser visualizada [aqui - Coverage](https://19950512.github.io/jusizi).
 
 
 ## Tecnologias
@@ -29,4 +29,3 @@ A Cobertura de testes pode ser visualizada [aqui - Coverage](https://19950512.gi
 - ~~Redis~~ (Em breve)
 - ~~Nginx~~ (Em breve)
 - ~~Flutter~~ (Em breve)
-
