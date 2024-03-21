@@ -160,7 +160,7 @@ readonly class ImplementacaoRepositorioAutenticacao implements RepositorioAutent
             }
     }
 
-    public function novaEmpresa(EntradaFronteiraNovaEmpresa $params): void
+    public function cadastrarNovaEmpresa(EntradaFronteiraNovaEmpresa $params): void
     {
 
         if (empty($params->name)) {
@@ -218,7 +218,7 @@ readonly class ImplementacaoRepositorioAutenticacao implements RepositorioAutent
         }
     }
 
-    public function contaExistePorEmail(string $email): bool
+    public function jaExisteContaComEsseEmail(string $email): bool
     {
 
         if (empty($email)) {

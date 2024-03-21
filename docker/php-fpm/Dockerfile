@@ -21,6 +21,4 @@ RUN apt-get update \
 
 RUN docker-php-ext-configure pgsql -with-pgsql=/usr/local/pgsql && docker-php-ext-install pgsql pdo_pgsql sockets
 
-RUN mkdir -p /application/src/Infra/APIs/Public/logs.txt
-
 #CMD ["php", "/application/src/Infra/Services/EmailService.php"]

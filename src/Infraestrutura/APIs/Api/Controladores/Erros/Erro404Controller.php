@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Infraestrutura\APIs\Autenticacao\Controllers\Errors;
+namespace App\Infraestrutura\APIs\Api\Controladores\Erros;
 
 use App\Infraestrutura\APIs\Api\Controladores\Middlewares\Controller;
 use DI\Container;

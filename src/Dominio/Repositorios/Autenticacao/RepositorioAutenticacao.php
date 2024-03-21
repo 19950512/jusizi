@@ -13,12 +13,12 @@ interface RepositorioAutenticacao
 {
     public function buscarContaPorCodigo(string $contaCodigo): SaidaFronteiraBuscarContaPorCodigo;
     public function buscarContaPorEmail(string $email): SaidaFronteiraBuscarContaPorCodigo;
-    public function contaExistePorEmail(string $email): bool;
+    public function jaExisteContaComEsseEmail(string $email): bool;
     public function contaExistePorEmailESenha(string $email, string $senha): bool;
 
     public function buscarEmpresaPorCodigo(string $empresaCodigo): SaidaFronteiraEmpresa;
     public function empresaExistePorCodigo(string $empresaCodigo): bool;
-    public function novaEmpresa(EntradaFronteiraNovaEmpresa $params): void;
+    public function cadastrarNovaEmpresa(EntradaFronteiraNovaEmpresa $params): void;
     public function novaConta(EntradaFronteiraNovaConta $params): void;
 
     public function buscarToken(string $token, string $contaCodigo, string $empresaCodigo): string;

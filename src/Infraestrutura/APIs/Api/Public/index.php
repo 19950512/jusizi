@@ -1,17 +1,20 @@
 <?php
 
-namespace App\Infra\Api;
+declare(strict_types=1);
 
-include_once __DIR__.'/../../../Config/autoload.php';
+namespace App\Infraestrutura\APIs\Api\Public;
 
-use App\Infra\Api\Router;
-use App\Configuracao\Containerapp;
+require_once __DIR__ . '/../../../../Aplicacao/Compartilhado/Containers/Container.php';
 
-$containerApp = Containerapp::getInstance();
+use App\Aplicacao\Compartilhado\Containers\Container;
+use App\Infraestrutura\APIs\Router;
+
+$containerApp = Container::getInstance();
 
 $container = $containerApp->get(null);
 
 $router = new Router(
-    __SERVER: $_SERVER,
-    container: $container
+    request_uri: $_SERVER['REQUEST_URI'] ?? '',
+    container: $container,
+    apiName: 'Api'
 );

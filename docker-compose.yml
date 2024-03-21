@@ -18,7 +18,7 @@ services:
     networks:
       - jusizi_network
 
-  webserver:
+  api-autenticacao:
     image: 'nginx:alpine'
     container_name: jusizi_nginx
     working_dir: /application
