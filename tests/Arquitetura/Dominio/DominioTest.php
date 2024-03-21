@@ -6,4 +6,5 @@ arch('Dominio não pode utilizar nada de nenhuma outra camada')
         'App\Infraestrutura',
         'App\Aplicacao',
         'App\Configuracao'
-    ]);
+    ])
+	->group('Arquitetura-Dominio');
