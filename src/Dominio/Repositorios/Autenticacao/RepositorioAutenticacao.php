@@ -16,7 +16,7 @@ interface RepositorioAutenticacao
     public function jaExisteContaComEsseEmail(string $email): bool;
     public function contaExistePorEmailESenha(string $email, string $senha): bool;
 
-    public function buscarEmpresaPorCodigo(string $empresaCodigo): SaidaFronteiraEmpresa;
+    public function obterEmpresaPorCodigo(string $empresaCodigo): SaidaFronteiraEmpresa;
     public function empresaExistePorCodigo(string $empresaCodigo): bool;
     public function cadastrarNovaEmpresa(EntradaFronteiraNovaEmpresa $params): void;
     public function novaConta(EntradaFronteiraNovaConta $params): void;

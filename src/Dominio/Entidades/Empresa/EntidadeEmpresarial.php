@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace App\Dominio\Entidades\Empresa;
 
+use App\Dominio\Entidades\Empresa\Colaboradores\Colaboradores;
+use App\Dominio\ObjetoValor\Apelido;
 use App\Dominio\Repositorios\Autenticacao\Fronteiras\SaidaFronteiraEmpresa;
 use App\Dominio\ObjetoValor\Endereco\Endereco;
 use App\Dominio\ObjetoValor\Endereco\CEP;
@@ -21,9 +23,11 @@ use Exception;
 
 class EntidadeEmpresarial
 {
+
+	public Colaboradores $colaboradores;
     public function __construct(
         readonly public IdentificacaoUnica $codigo,
-        public NomeCompleto $nomeCompleto,
+        public Apelido $apelido,
         public DocumentoIdentificacao $numeroDocumento,
         public Endereco $endereco,
     ){}
@@ -32,14 +36,14 @@ class EntidadeEmpresarial
     {
 
 		try {
-			$nomeCompleto = new NomeCompleto($params->nome);
+			$apelido = new Apelido($params->nome);
 		}catch (Exception $erro){
-			throw new Exception("O nome completo da Entidade Empresarial '{$params->nome}' ID: $params->empresaCodigo não está válido. {$erro->getMessage()}");
+			throw new Exception("O Apelido da Entidade Empresarial '{$params->nome}' ID: $params->empresaCodigo não está válido. {$erro->getMessage()}");
 		}
 
-        return new EntidadeEmpresarial(
+        $entidadeEmpresarial = new EntidadeEmpresarial(
             codigo: new IdentificacaoUnica($params->empresaCodigo),
-	        nomeCompleto: $nomeCompleto,
+	        apelido: $apelido,
             numeroDocumento: new CNPJ($params->numeroDocumento),
             endereco:  new Endereco(
                 rua: new TextoSimples(''),
@@ -57,13 +61,16 @@ class EntidadeEmpresarial
                 ),
             ),
         );
+		$entidadeEmpresarial->colaboradores = new Colaboradores();
+
+		return $entidadeEmpresarial;
     }
 
     public function toArray(): array
     {
         return [
             'codigo' => $this->codigo->get(),
-            'nomeFantasia' => $this->nomeCompleto->get(),
+            'apelido' => $this->apelido->get(),
             'documentoTipo' => is_a($this->numeroDocumento, CNPJ::class) ? 'CNPJ' : 'CPF',
             'documentoNumero' => $this->numeroDocumento->get(),
         ];

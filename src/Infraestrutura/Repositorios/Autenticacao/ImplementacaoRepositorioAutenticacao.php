@@ -58,7 +58,7 @@ readonly class ImplementacaoRepositorioAutenticacao implements RepositorioAutent
     ){}
 
 
-    public function buscarEmpresaPorCodigo(string $empresaCodigo): SaidaFronteiraEmpresa
+    public function obterEmpresaPorCodigo(string $empresaCodigo): SaidaFronteiraEmpresa
     {
 
         if (empty($empresaCodigo)) {
@@ -82,7 +82,8 @@ readonly class ImplementacaoRepositorioAutenticacao implements RepositorioAutent
 
             return new SaidaFronteiraEmpresa(
                 empresaCodigo: $fetch['business_id'] ?? '',
-                nome: $fetch['business_name'] ?? ''
+                nome: $fetch['business_name'] ?? '',
+                numeroDocumento: ''
             );
 
         } catch (PDOException $e) {

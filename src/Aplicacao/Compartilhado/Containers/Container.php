@@ -62,6 +62,8 @@ final class Container
 
 			$containerApplication = $this->loader_container(__DIR__ . '/ContainerAplicacao.php');
 
+			$containerEmpresa = $this->loader_container(__DIR__ . '/ContainerEmpresa.php');
+
 	        $containerBuilder->addDefinitions([
 
 	            // Application

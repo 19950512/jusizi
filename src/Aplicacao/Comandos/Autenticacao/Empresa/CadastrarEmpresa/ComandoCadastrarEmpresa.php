@@ -8,6 +8,7 @@ use App\Aplicacao\Comandos\Comando;
 use App\Dominio\ObjetoValor\Apelido;
 use App\Dominio\ObjetoValor\Email;
 use App\Dominio\ObjetoValor\NomeCompleto;
+use App\Dominio\ObjetoValor\Senha;
 use Exception;
 use Override;
 
@@ -44,16 +45,12 @@ final readonly class ComandoCadastrarEmpresa implements Comando
 			throw new Exception('A senha do responsável precisa ser informada adequadamente.');
 		}
 
-		$limiteMaximoCaracteresSenha = 50;
-		$limiteMinimoCaracteresSenha = 9;
-
-		if(strlen($this->responsavelSenha) < $limiteMinimoCaracteresSenha){
-			throw new Exception("A senha precisa ter no mínimo $limiteMinimoCaracteresSenha caracteres.");
+		try {
+			$senha = new Senha($this->responsavelSenha);
+		}catch (Exception $erro) {
+			throw new Exception("A senha informada está inválida. {$erro->getMessage()}");
 		}
 
-		if(strlen($this->responsavelSenha) > $limiteMaximoCaracteresSenha){
-			throw new Exception("A senha atingiu o limite máximo de $limiteMaximoCaracteresSenha caracteres.");
-		}
 
 		try {
 			$nomeFantasia = new Apelido($this->nomeFantasia);
@@ -76,7 +73,7 @@ final readonly class ComandoCadastrarEmpresa implements Comando
 		$this->responsavelEmailPronto = $email->get();
 		$this->responsavelNomeCompletoPronto = $responsavelNomeCompleto->get();
 		$this->nomeFantasiaPronto = $nomeFantasia->get();
-		$this->responsavelSenhaPronto = $this->responsavelSenha;
+		$this->responsavelSenhaPronto = $senha->get();
 	}
 
 	public function obterNomeFantasia(): string

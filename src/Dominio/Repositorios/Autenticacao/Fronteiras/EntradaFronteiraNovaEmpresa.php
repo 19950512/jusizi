@@ -8,6 +8,6 @@ final readonly class EntradaFronteiraNovaEmpresa
 {
     public function __construct(
         public string $empresaCodigo,
-        public string $nome,
+        public string $apelido,
     ){}
 }
